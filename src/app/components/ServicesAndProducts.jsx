@@ -42,7 +42,7 @@ export default function ServicesAndProducts() {
   const gap = usableHeight / (SERVICES.length - 1);
 
   return (
-    <div className="w-full h-screen flex justify-center items-center bg-white relative overflow-hidden">
+    <div className="w-full h-[800px] flex justify-center items-center bg-white relative overflow-hidden">
 
       {/* Background glow */}
       <div className="absolute w-[900px] h-[900px] rounded-full bg-[radial-gradient(circle,rgba(163,163,209,0.15),rgba(163,163,209,0))] opacity-70 blur-[80px] translate-y-[-80px]"></div>

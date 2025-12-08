@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white backdrop-blur-lg shadow-sm">
+    <nav className="w-full h-20 fixed top-0 left-0 z-50 bg-white backdrop-blur-lg shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}

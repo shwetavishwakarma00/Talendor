@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import TeamCollaboration from "../../assets/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working.jpg";
+
 
 import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
@@ -43,7 +43,7 @@ export default function HeroSection() {
     HR EXCELLENCE REDEFINED
   </motion.p>
 
-  <motion.h1 
+  <motion.div 
     className="text-5xl lg:text-5xl font-bold mb-4 text-black"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -53,16 +53,16 @@ export default function HeroSection() {
     <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
       TALENDOR
     </h1>
-  </motion.h1>
+  </motion.div>
 
-  <motion.h2 
+  <motion.div 
     className="text-lg text-gray-600 mb-6"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.45, duration: 0.6 }}
   >
     Door to all your Talent Needs
-  </motion.h2>
+  </motion.div>
 
   <motion.p 
     className="text-gray-500 mb-8"
@@ -176,7 +176,7 @@ export default function HeroSection() {
     <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
 
       <Image 
-        src={TeamCollaboration}
+        src="/images/herosectionimg.jpg"
         alt="Team Collaboration"
         fill
         className="object-cover"

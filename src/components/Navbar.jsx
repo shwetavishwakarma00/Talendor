@@ -11,8 +11,8 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Products", href: "/services" },
-    { name: "Contact", href: "/contact" },
+    { name: "Products", href: "/products" },
+    { name: "Services", href: "/services" }
   ];
 
   // Detect scroll to add background
@@ -61,7 +61,7 @@ export default function Navbar() {
               onClick={() => setActive(link.name)}
               className={`relative px-1 transition ${
                 active === link.name ? "text-black" : scrolled ? "text-gray-700" : "text-black"
-              } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-1 after:w-0 after:bg-[#ff7f50] hover:after:w-full hover:after:transition-all`}
+              } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-1 after:w-0 after:bg-[#43438f] hover:after:w-full hover:after:transition-all`}
             >
               {link.name}
             </Link>
@@ -70,11 +70,7 @@ export default function Navbar() {
 
         {/* Contact Button */}
         <Link href="/contact">
-          <button className={`px-5 py-2 rounded-full transition font-medium ${
-            scrolled
-              ? "bg-[#5454AB] text-white hover:bg-[#43438f]"
-              : "bg-orange-500 text-white hover:bg-orange-600"
-          }`}>
+          <button className="px-5 py-2 rounded-full transition font-medium bg-[#43438f] text-white ">
             Contact Us
           </button>
         </Link>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "NextGen Managed Services",
+    "description": "From CloudOps to DataOps to AIOps, we deliver predictive monitoring, agent-led remediation, and cost intelligence.",
+    "bullets": [
+      "CloudOps intelligence",
+      "DataOps",
+      "AIOps excellence",
+      "Unified observability",
+      "Proactive FinOps & SecOps"
+    ],
+    "image": "/images/section1.png"
+  },
+  {
+    "id": 2,
+    "title": "Cloud Migration",
+    "description": "Shift workloads to the cloud securely with automated best-practice deployment frameworks.",
+    "bullets": [
+      "Migration planning",
+      "Cloud security",
+      "Automation pipelines"
+    ],
+    "image": "/images/section2.png"
+  },
+  {
+    "id": 3,
+    "title": "Data & AI Engineering",
+    "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
+    "bullets": [
+      "ETL pipelines",
+      "ML Ops",
+      "Real-time analytics"
+    ],
+    "image": "/images/section3.png"
+  }
+]

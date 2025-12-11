@@ -56,7 +56,7 @@ export default function ScrollingShowcase() {
 
   {/* LEFT — FIXED CENTERED */}
   <div className="lg:w-1/3 sticky top-1/3 -translate-y-1/2 h-fit flex flex-col justify-center">
-    <h1 className="text-4xl md:text-5xl font-semibold text-[#02285B] leading-tight text-center lg:text-left">
+    <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent leading-tight text-center lg:text-left">
       Services
     </h1>
     <p className="text-lg md:text-xl mt-3 text-gray-500 text-center lg:text-left">
@@ -79,7 +79,7 @@ export default function ScrollingShowcase() {
   </div>
 
   {/* RIGHT SCROLL SECTION — UNCHANGED */}
-  <div className="lg:w-1/3 flex flex-col gap-32 md:gap-40">
+  <div className="lg:w-1/2 flex flex-col gap-32 md:gap-40 mt ">
     {scrollSections.map((section, index) => (
       <div
         key={section.id}
@@ -88,8 +88,8 @@ export default function ScrollingShowcase() {
         className="min-h-[55vh] md:min-h-[65vh] flex flex-col justify-start"
       >
         <motion.h2
-          className={`text-2xl md:text-3xl font-semibold mb-4 ${
-            activeIndex === index ? "text-sky-600" : "text-slate-400"
+          className={`text-2xl text-[#5c5cda] md:text-3xl font-semibold mb-4 ${
+            activeIndex === index ? "text-[#5c5cda]" : "text-slate-400"
           }`}
           initial={{ x: 30 }}
           animate={{ x: activeIndex === index ? 0 : 5 }}
@@ -108,7 +108,7 @@ export default function ScrollingShowcase() {
           ))}
         </ul>
 
-        <button className="mt-6 w-fit bg-sky-500 text-white px-5 py-2 rounded-full hover:bg-sky-600">
+        <button className="mt-6 w-fit bg-[#5454AB] text-white px-5 py-2 rounded-full hover:bg-[#43438f]">
           Learn more
         </button>
       </div>

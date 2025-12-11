@@ -12,7 +12,7 @@ export default function Navbar() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/aboutus" },
     { name: "Products", href: "/products" },
     { name: "Services", href: "/services" },
   ];
@@ -28,9 +28,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`w-full h-20 fixed top-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-sm" : "bg-transparent"
-      }`}
+      className="w-full h-20 fixed top-0 left-0 z-50 transition-all duration-300 bg-white shadow-sm"
     >
       <div className="container mx-auto px-6 md:px-40 py-4 flex items-center justify-between">
 
@@ -58,7 +56,7 @@ export default function Navbar() {
                 active === link.name
                   ? "text-black"
                   : scrolled
-                  ? "text-gray-700"
+                  ? "text-black"
                   : "text-black"
               } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-1 
               after:w-0 after:bg-[#43438f] hover:after:w-full hover:after:transition-all`}

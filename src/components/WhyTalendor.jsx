@@ -19,6 +19,122 @@ export default function WhyTalendor() {
         "
       ></div>
 
+     {/* RIGHT-SIDE CONCENTRIC CIRCLES + CENTER TEXT + FLOATING CARDS */}
+<div className="absolute right-25 top-1/2 -translate-y-1/2 w-[500px] h-[500px] flex items-center justify-center mt-15">
+
+  {/* OUTER CIRCLE */}
+  <motion.div
+    className="w-[450px] h-[450px] rounded-full border border-[#2039b8]/90 flex items-center justify-center relative"
+    initial={{ scale: 0.7, opacity: 0 }}
+    whileInView={{ scale: 1, opacity: 1 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+
+    {/* CARD: TOP FLOATING */}
+    <motion.div
+      className="absolute top-[-20px] left-1/2 -translate-x-1/2 
+        px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 
+        text-white text-[15px] shadow-[0_4px_20px_rgba(255,255,255,0.15)]
+        transition-all duration-300"
+      animate={{ y: [0, -12, 0] }}
+      transition={{ duration: 2.6, repeat: Infinity, repeatType: "mirror" }}
+      whileHover={{ backgroundColor: "rgba(255,255,255,0.18)" }}
+    >
+      Culture
+    </motion.div>
+
+    {/* MIDDLE CIRCLE */}
+    <motion.div
+      className="w-[360px] h-[360px] rounded-full border border-[#5454AB] flex items-center justify-center relative"
+      initial={{ scale: 0.7, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.1, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+
+      {/* CARD: LEFT FLOATING */}
+      <motion.div
+        className="absolute left-[-50px] top-1/2 -translate-y-1/2 
+          px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 
+          text-white text-sm shadow-[0_4px_20px_rgba(255,255,255,0.15)]
+          transition-all duration-300"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 2.6, repeat: Infinity, repeatType: "mirror" }}
+        whileHover={{ backgroundColor: "rgba(255,255,255,0.18)" }}
+      >
+        HR Strategy
+      </motion.div>
+
+      {/* CARD: RIGHT FLOATING */}
+      <motion.div
+        className="absolute right-[-50px] top-1/2 -translate-y-1/2 
+          px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 
+          text-white text-sm shadow-[0_4px_20px_rgba(255,255,255,0.15)]
+          transition-all duration-300"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2.6, repeat: Infinity, repeatType: "mirror" }}
+        whileHover={{ backgroundColor: "rgba(255,255,255,0.18)" }}
+      >
+        Talent Dev
+      </motion.div>
+
+      {/* INNER CIRCLE */}
+      <motion.div
+        className="w-[280px] h-[280px] rounded-full border border-[#FF7A00] flex items-center justify-center relative"
+        initial={{ scale: 0.7, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        {/* CENTER TEXT */}
+        <div className="flex flex-col items-center justify-center text-white">
+          <h1 className="text-6xl font-bold">20+</h1>
+          <p className="text-medium text-gray-400 opacity-80 -mt-1">
+            Years of Global Experience
+          </p>
+        </div>
+      </motion.div>
+
+    </motion.div>
+
+    {/* CARD: BOTTOM FLOATING */}
+    <motion.div
+      className="absolute bottom-[-25px] left-1/2 -translate-x-1/2 
+        px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 
+        text-white text-sm shadow-[0_4px_20px_rgba(255,255,255,0.15)]
+        transition-all duration-300"
+      animate={{ y: [0, 15, 0] }}
+      transition={{ duration: 2.6, repeat: Infinity, repeatType: "mirror" }}
+      whileHover={{ backgroundColor: "rgba(255,255,255,0.18)" }}
+    >
+      Global Experience
+    </motion.div>
+
+  </motion.div>
+</div>
+
+  {/* Tailwind Blob Animation */}
+      <style jsx>{`
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        @keyframes blob {
+          0% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+          100% { transform: translate(0px, 0px) scale(1); }
+        }
+      `}</style>
+
+ 
+
+
+
+
       {/* CONTENT LEFT */}
       <div className="relative z-10 max-w-4xl text-white ml-6">
         <motion.h2

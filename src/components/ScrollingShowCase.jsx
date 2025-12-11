@@ -1,177 +1,122 @@
-// "use client";
-
-// import { useState } from "react";
-// import { useInView } from "framer-motion"
-// import { motion } from "framer-motion";
-// import scrollSections from "@/data/scrollsection.json";
-
-// export default function ScrollingShowcase() {
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   const handleInView = (index) => {
-//     setActiveIndex(index);
-//   };
-
-//   return (
-//     <div className="w-full min-h-screen flex gap-10 px-20 py-40">
-
-//       {/* LEFT FIXED SECTION */}
-//       <div className="w-1/3 sticky top-50 h-fit">
-//         <h1 className="text-5xl font-semibold text-[#02285B] leading-tight">
-//           Services  <br /> <p className="text-xl font-light">Comprehensive for your organization</p>
-//         </h1>
-//       </div>
-
-//       {/* MIDDLE IMAGE */}
-//       <div className="w-1/3 flex justify-center items-start">
-//         <motion.img
-//           key={activeIndex}
-//           src={scrollSections[activeIndex].image}
-//           alt="scroll visual"
-//           className="w-72 h-72 object-contain"
-//           initial={{ opacity: 0, scale: 0.8 }}
-//           animate={{ opacity: 1, scale: 1 }}
-//           transition={{ duration: 0.6 }}
-//         />
-//       </div>
-
-//       {/* RIGHT CONTENT */}
-//       <div className="w-1/2 gap-10">
-
-//         {scrollSections.map((section, index) => {
-//           const { ref } = useInView({
-//             threshold: 0.4,
-//             onChange: (inView) => inView && handleInView(index),
-//           });
-
-//           return (
-//             <div
-//               key={section.id}
-//               ref={ref}
-//               className="min-h-screen flex flex-col justify-center"
-//             >
-//               <motion.h2
-//                 className="text-4xl text-sky-500 font-semibold mb-4"
-//                 initial={{ opacity: 0, x: 50 }}
-//                 animate={{
-//                   opacity: activeIndex === index ? 1 : 0.3,
-//                   x: activeIndex === index ? 0 : 10,
-//                 }}
-//                 transition={{ duration: 0.4 }}
-//               >
-//                 {section.title}
-//               </motion.h2>
-
-//               <p className="text-gray-600 mb-4">
-//                 {section.description}
-//               </p>
-
-//               <ul className="text-gray-700 space-y-2">
-//                 {section.bullets.map((b, i) => (
-//                   <li key={i} className="flex items-start gap-2">
-//                     <span className="text-sky-500">•</span> {b}
-//                   </li>
-//                 ))}
-//               </ul>
-
-//               <button className="mt-6 bg-sky-500 text-white px-5 py-2 rounded-full hover:bg-sky-600">
-//                 Explore More
-//               </button>
-//             </div>
-//           );
-//         })}
-
-//       </div>
-//     </div>
-//   );
-// }
 
 
 "use client";
 
-import { useState } from "react";
-import { useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import scrollSections from "@/data/scrollsection.json";
 
 export default function ScrollingShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleInView = (index) => setActiveIndex(index);
-  const handleHover = (index) => setActiveIndex(index);
+  // hold DOM nodes for each section
+  const sectionRefs = useRef([]);
+  sectionRefs.current = []; 
+
+  // callback ref to populate sectionRefs.current
+  const setSectionRef = (el, idx) => {
+    sectionRefs.current[idx] = el;
+  };
+
+  useEffect(() => {
+    if (!sectionRefs.current.length) return;
+
+    // IntersectionObserver callback
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = Number(entry.target.dataset.index);
+          // update only when different to avoid extra renders
+          setActiveIndex((prev) => (prev === idx ? prev : idx));
+        }
+      });
+    };
+
+    const obs = new IntersectionObserver(observerCallback, {
+      threshold: 0.5, // change when 50% of the section is visible
+    });
+
+    // observe all existing section elements
+    sectionRefs.current.forEach((el) => {
+      if (el) obs.observe(el);
+    });
+
+    return () => {
+      // cleanup
+      sectionRefs.current.forEach((el) => {
+        if (el) obs.unobserve(el);
+      });
+      obs.disconnect();
+    };
+  }, [/* no deps other than refs content, we intentionally run after mount */]);
 
   return (
-    <div className="w-full min-h-screen flex gap-16 px-20 py-24">
+    <div className="w-full min-h-screen flex flex-col lg:flex-row gap-16 
+                px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-24 mt-20">
 
-      {/* LEFT FIXED TITLE */}
-      <div className="w-1/3 sticky top-40 h-fit">
-        <h1 className="text-5xl font-semibold text-[#02285B] leading-tight">
-          Services
-        </h1>
-        <p className="text-xl mt-3 text-gray-500">
-          Comprehensive for your organization
-        </p>
+  {/* LEFT — FIXED CENTERED */}
+  <div className="lg:w-1/3 sticky top-1/3 -translate-y-1/2 h-fit flex flex-col justify-center">
+    <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent leading-tight text-center lg:text-left">
+      Services
+    </h1>
+    <p className="text-lg md:text-xl mt-3 text-gray-500 text-center lg:text-left">
+      Comprehensive for your organization
+    </p>
+  </div>
+
+  {/* CENTER IMAGE — FIXED CENTERED */}
+  <div className="lg:w-1/3 sticky top-1/3 -translate-y-1/2 h-fit 
+                  flex flex-col justify-center items-center">
+    <motion.img
+      key={activeIndex}
+      src={scrollSections[activeIndex]?.image}
+      alt={scrollSections[activeIndex]?.title || "service image"}
+      className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 object-contain drop-shadow-xl"
+      initial={{ opacity: 0, scale: 0.45 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.1 }}
+    />
+  </div>
+
+  {/* RIGHT SCROLL SECTION — UNCHANGED */}
+  <div className="lg:w-1/2 flex flex-col gap-32 md:gap-40 mt ">
+    {scrollSections.map((section, index) => (
+      <div
+        key={section.id}
+        data-index={index}
+        ref={(el) => setSectionRef(el, index)}
+        className="min-h-[55vh] md:min-h-[65vh] flex flex-col justify-start"
+      >
+        <motion.h2
+          className={`text-2xl text-[#5c5cda] md:text-3xl font-semibold mb-4 ${
+            activeIndex === index ? "text-[#5c5cda]" : "text-slate-400"
+          }`}
+          initial={{ x: 30 }}
+          animate={{ x: activeIndex === index ? 0 : 5 }}
+          transition={{ duration: 0.3 }}
+        >
+          {section.title}
+        </motion.h2>
+
+        <p className="text-gray-600 mb-4">{section.description}</p>
+
+        <ul className="text-gray-700 space-y-2">
+          {section.bullets.map((b, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <span className="text-sky-500 text-lg">•</span> {b}
+            </li>
+          ))}
+        </ul>
+
+        <button className="mt-6 w-fit bg-[#5454AB] text-white px-5 py-2 rounded-full hover:bg-[#43438f]">
+          Learn more
+        </button>
       </div>
+    ))}
+  </div>
+</div>
 
-      {/* FIXED IMAGE COLUMN (THIS WILL NOT SCROLL) */}
-      <div className="w-1/3 sticky top-15 h-fit flex justify-center items-center">
-        <motion.img
-          key={activeIndex}
-          src={scrollSections[activeIndex]?.image}
-          alt=""
-          className="w-80 h-80 object-contain drop-shadow-xl"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        />
-      </div>
-
-      {/* SCROLLING RIGHT CONTENT */}
-      <div className="w-1/3 flex flex-col gap-40">
-
-        {scrollSections.map((section, index) => {
-          const { ref } = useInView({
-            threshold: 0.4,
-            onChange: (inView) => inView && handleInView(index),
-          });
-
-          return (
-            <div
-              key={section.id}
-              ref={ref}
-              className="min-h-[65vh] flex flex-col justify-start"
-            >
-              <motion.h2
-                onMouseEnter={() => handleHover(index)}
-                className="text-3xl text-sky-600 font-semibold mb-4 cursor-pointer"
-                initial={{ opacity: 0, x: 30 }}
-                animate={{
-                  opacity: activeIndex === index ? 1 : 0.4,
-                  x: activeIndex === index ? 0 : 5,
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                {section.title}
-              </motion.h2>
-
-              <p className="text-gray-600 mb-4">{section.description}</p>
-
-              <ul className="text-gray-700 space-y-2">
-                {section.bullets.map((b, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-sky-500 text-lg">•</span> {b}
-                  </li>
-                ))}
-              </ul>
-
-              <button className="mt-6 bg-sky-500 text-white px-5 py-2 rounded-full hover:bg-sky-600">
-                Explore More
-              </button>
-            </div>
-          );
-        })}
-
-      </div>
-    </div>
   );
 }
+
+

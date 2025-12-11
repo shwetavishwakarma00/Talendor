@@ -1,0 +1,22 @@
+{
+  "founders": [
+    {
+      "name": "Anita Chandola",
+      "title": "Executive Search Consultant",
+      "description": [
+        "Anita has spent nearly 15 years to find best fit talent for organizations from different industries including FMCG, Hospitality, Management Consulting, Banking, Aviation, etc.",
+        "Anita is a passionate Executive Search Consultant and loves to spend time with family, friends and singing."
+      ],
+      "image": "/images/anita_chandola.webp"
+    },
+    {
+      "name": "Praveen Chandola",
+      "title": "Strategic HR Consultant, Executive Coach & Trainer",
+      "description": [
+        "Praveen is a results-driven HR professional, Executive Coach & Trainer with 20+ years of strategic global experience in Human Resource and Operations.",
+        "Praveen is self-driven, nature and adventure lover, continues learning mindset person with humble attitude towards life."
+      ],
+      "image": "/images/praveen_chandola.webp"
+    }
+  ]
+}

@@ -5,7 +5,11 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import FlagshipProduct from "@/components/FlagshipProduct";
 import DeliveryFormat from "@/components/DeliveryFormat";
 import WhyTalendor from "@/components/WhyTalendor";
+<<<<<<< HEAD
+import Founders from "@/components/Founders";
+=======
 import ScrollingShowCase from "@/components/ScrollingShowCase";
+>>>>>>> 4120ae869c71eb85679436f8cb73df19b6a1f9e1
 
 
 export default function Page() {
@@ -19,6 +23,7 @@ export default function Page() {
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>
+      <Founders/>
     </main>
   );
 }

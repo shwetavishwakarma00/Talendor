@@ -1,37 +1,99 @@
 [
   {
     "id": 1,
-    "title": "NextGen Managed Services",
-    "description": "From CloudOps to DataOps to AIOps, we deliver predictive monitoring, agent-led remediation, and cost intelligence.",
+    "title": "STRATEGIC HR CONSULTING SERVICES",
+    "description": "Build core leadership fundamentals for emerging leaders.",
     "bullets": [
-      "CloudOps intelligence",
-      "DataOps",
-      "AIOps excellence",
-      "Unified observability",
-      "Proactive FinOps & SecOps"
+      "Excutive and Leadership Services",
+      "Unleasing Talent Potential",
+      "Future-Ready Organization",
+      "Business-Enbaling Strategy"
     ],
-    "image": "/images/section1.png"
+    "image": "/images/logo.png"
   },
   {
     "id": 2,
-    "title": "Cloud Migration",
+    "title": "LEADERSHIP DEVELOPMENT JOURNEYS ",
     "description": "Shift workloads to the cloud securely with automated best-practice deployment frameworks.",
     "bullets": [
-      "Migration planning",
-      "Cloud security",
-      "Automation pipelines"
+      "Foundational Leadership Program",
+      "Advance Leadership Program",
+      "Executive & C-Suite Development",
+      "Global, Inclusive & Cross-Culture Leadership",
+      "Discovering Self & Executive Presence",
+      "Leading Teams & Building Thriving Cultures",
+      "Thriving in Bussiness Leadereship"
+
     ],
-    "image": "/images/section2.png"
+    "image": "/images/3.jpg"
   },
   {
     "id": 3,
-    "title": "Data & AI Engineering",
+    "title": "RESKILLING PROGRAMS",
     "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
     "bullets": [
-      "ETL pipelines",
-      "ML Ops",
-      "Real-time analytics"
+      "Leading self in VUCA/BANI",
+      "Stategic Capability & Commercial Impact",
+      "Self-Mastery & Mindset Expansion",
+      "Undestanding Generational Differences ",
+      "Working Effectively with GenZ",
+      "Reverse Metoring & Inclusive Innovation",
+      "Working Smarter"
     ],
-    "image": "/images/section3.png"
+    "image": "/images/1.jpg"
+  },
+   {
+    "id": 4,
+    "title": "TEAM DEVLOPMENT JOURNEYS",
+    "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
+    "bullets": [
+      "Foundations of Team Happiness & Trust",
+      "Builinding Multigenerational Teams",
+      "Thriving & High-Performing Teams"
+    ],
+    "image": "/images/2.jpg"
+  },
+  {
+    "id": 5,
+    "title": "WELBEING",
+    "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
+    "bullets": [
+      "Retreats",
+      "Stress Management",
+      "Emotional Intelligence",
+      "Resillience Building",
+      "Work-Life Balance",
+      "Financial Wellness",
+      "Social Connection"
+    ],
+    "image": "/images/3.jpg"
+  },
+  {
+    "id": 6,
+    "title": "KEY COACHING & MENTORING OFFERINGS",
+    "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
+    "bullets": [
+      "Individual Development Coaching",
+      "Onboarding Transition Coaching",
+      "Job Role Transition Coaching",
+      "Leadership Development Coaching",
+      "Career Coaching",
+      "Young HR Professional Mentoring",
+      "Fututre HR Leader Metoring"
+    ],
+    "image": "/images/4.jpg"
+  },
+   {
+    "id": 7,
+    "title": "CUSTOMER DELIGHT PROGRAMS",
+    "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
+    "bullets": [
+      "Moments of Magic",
+      "Customer Delight Journey",
+      "Service Exellence"
+    ],
+    "image": "/images/2.jpg"
   }
+
+
 ]

@@ -5,6 +5,7 @@ import ServicesAndProducts from "@/components/ServicesAndProducts";
 import FlagshipProduct from "@/components/FlagshipProduct";
 import DeliveryFormat from "@/components/DeliveryFormat";
 import WhyTalendor from "@/components/WhyTalendor";
+import Founders from "@/components/Founders";
 
 
 export default function Page() {
@@ -18,6 +19,7 @@ export default function Page() {
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>
+      <Founders/>
     </main>
   );
 }

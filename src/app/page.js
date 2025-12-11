@@ -17,7 +17,6 @@ export default function Page() {
       <HeroSection />
       <ExpertiseSection />
       <ScrollingShowCase/>
-      
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>

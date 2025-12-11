@@ -104,8 +104,8 @@ export default function FlagshipProduct() {
       end: 180,
       label1: "Inspiration",
       label2: "Creative Drive",
-      tx: 260,
-      ty: 395,
+      tx: 200,
+      ty: 389,
     },
     {
       color: "#8DC63F",
@@ -113,8 +113,8 @@ export default function FlagshipProduct() {
       end: 270,
       label1: "Harmony",
       label2: "Supportive Focus",
-      tx: 130,
-      ty: 260,
+      tx: 150,
+      ty: 150,
     },
   ].map((seg, i) => {
     const R = 205;

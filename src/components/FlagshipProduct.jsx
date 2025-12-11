@@ -77,153 +77,174 @@ export default function FlagshipProduct() {
   className="w-1/2 h-full flex items-center justify-center"
   style={{ backgroundColor: "#222244" }}
 >
-  <svg width="520" height="520" viewBox="0 0 520 520">
-    <defs>
-      {/* OUTER TEXT PATH (precisely inside border) */}
-      <path
-        id="outerTextPath"
-        d="
-          M260,65
-          A205,205 0 1,1 259.9,65
-        "
-      />
+   <svg width="520" height="520" viewBox="0 0 520 520">
+  {/* === SEGMENT DATA WITH TEXT === */}
+  {[
+    {
+      color: "#EC008C",
+      start: -90,
+      end: 0,
+      label1: "Energetic",
+      label2: "Bold Actions",
+      tx: 330,
+      ty: 130,
+    },
+    {
+      color: "#0072BC",
+      start: 0,
+      end: 90,
+      label1: "Clarity",
+      label2: "Clear Thinking",
+      tx: 380,
+      ty: 330,
+    },
+    {
+      color: "#F7941E",
+      start: 90,
+      end: 180,
+      label1: "Inspiration",
+      label2: "Creative Drive",
+      tx: 200,
+      ty: 389,
+    },
+    {
+      color: "#8DC63F",
+      start: 180,
+      end: 270,
+      label1: "Harmony",
+      label2: "Supportive Focus",
+      tx: 150,
+      ty: 150,
+    },
+  ].map((seg, i) => {
+    const R = 205;
+    const start = (seg.start * Math.PI) / 180;
+    const end = (seg.end * Math.PI) / 180;
 
-      {/* INNER TEXT PATH */}
-      <path
-        id="innerTextPath"
-        d="
-          M260,180
-          A90,90 0 1,1 259.9,180
-        "
-      />
-    </defs>
+    const x1 = 260 + R * Math.cos(start);
+    const y1 = 260 + R * Math.sin(start);
 
-    {/* ===== OUTER 5 SEGMENTS (Glow Only, No Scale) ===== */}
+    const x2 = 260 + R * Math.cos(end);
+    const y2 = 260 + R * Math.sin(end);
 
-    {[
-      { color: "#EC008C", start: -90, end: -18 },
-      { color: "#0072BC", start: -18, end: 54 },
-      { color: "#7F7F7F", start: 54, end: 126 },
-      { color: "#F7941E", start: 126, end: 198 },
-      { color: "#8DC63F", start: 198, end: 270 }
-    ].map((seg, i) => {
-      const R = 205; // matches gray border R = 205
-      const start = (seg.start * Math.PI) / 180;
-      const end = (seg.end * Math.PI) / 180;
-
-      const x1 = 260 + R * Math.cos(start);
-      const y1 = 260 + R * Math.sin(start);
-
-      const x2 = 260 + R * Math.cos(end);
-      const y2 = 260 + R * Math.sin(end);
-
-      const largeArc = seg.end - seg.start > 180 ? 1 : 0;
-
-      return (
+    return (
+      <g key={i}>
+        {/* STATIC QUADRANTS (NO CLICKING) */}
         <motion.path
-          key={i}
           d={`
             M260 260
             L${x1} ${y1}
-            A205 205 0 ${largeArc} 1 ${x2} ${y2}
+            A205 205 0 0 1 ${x2} ${y2}
             Z
           `}
           fill={seg.color}
           whileHover={{
-            filter: "drop-shadow(0 0 20px rgba(255,255,255,0.7))",
+            scale: 1.03,
+            filter: "drop-shadow(0 0 20px rgba(255,255,255,0.6))",
           }}
           transition={{ duration: 0.25 }}
-          style={{ cursor: "pointer" }}
         />
-      );
-    })}
 
-    {/* ===== OUTER GRAY BORDER (hugging segments perfectly) ===== */}
-    <circle
-      cx="260"
-      cy="260"
-      r="205"
-      fill="none"
-      stroke="#D1D1D1"
-      strokeWidth="22"
-    />
+        {/* SHOW TEXT ONLY WHEN BUTTON IS CLICKED */}
+        {showMessage && (
+          <>
+            <text
+              x={seg.tx}
+              y={seg.ty}
+              textAnchor="middle"
+              fill="white"
+              fontSize="18"
+              fontWeight="bold"
+            >
+              {seg.label1}
+            </text>
+            <text
+              x={seg.tx}
+              y={seg.ty + 18}
+              textAnchor="middle"
+              fill="white"
+              fontSize="14"
+              opacity="0.9"
+            >
+              {seg.label2}
+            </text>
+          </>
+        )}
+      </g>
+    );
+  })}
 
-    {/* OUTER CURVED TEXT */}
-    <text fill="#FFFFFF" fontSize="18" fontWeight="600">
-      <textPath href="#outerTextPath" startOffset="50%" textAnchor="middle">
-        Become an Insights Practitioner!
-      </textPath>
-    </text>
+  {/* GRAY RING BORDER */}
+  <circle
+    cx="260"
+    cy="260"
+    r="205"
+    fill="none"
+    stroke="#D1D1D1"
+    strokeWidth="22"
+  />
 
-    {/* ===== INNER CIRCLE (Smaller + Better Hover Scale) ===== */}
-    <motion.circle
-      cx="260"
-      cy="260"
-      r="95"
-      fill="#29ABE2"
-      stroke="#FFFFFF"
-      strokeWidth="6"
-        initial={{ opacity: 0, y: 20 }}
-      whileHover={{
-        scale: 1.09,
-        filter: "drop-shadow(0 0 15px rgba(255,255,255,0.8))",
-      }}
-      transition={{ duration: 0.25 }}
-      style={{ originX: "260px", originY: "260px", cursor: "pointer" }}
-    />
+  {/* CENTER CIRCLE (AS BEFORE) */}
+  <motion.circle
+    cx="260"
+    cy="260"
+    r="95"
+    fill="#29ABE2"
+    stroke="#FFFFFF"
+    strokeWidth="6"
+    animate={{
+      scale: showMessage ? 1.08 : 1,
+    }}
+    transition={{ duration: 0.4 }}
+  />
 
-    {/* INNER CURVED TEXT */}
-    <text fill="white" fontSize="11" fontWeight="bold">
-      <textPath href="#innerTextPath" startOffset="50%" textAnchor="middle">
-        Discovery Full Circle  •  Deeper Discovery
-      </textPath>
-    </text>
+  {/* CENTER TEXT — SAME LOGIC AS BEFORE */}
+  <text
+    x="260"
+    y="250"
+    textAnchor="middle"
+    fill="white"
+    fontSize="22"
+    fontWeight="bold"
+  >
+    {showMessage ? "Your Journey" : "Insight"}
+  </text>
 
-    {/* CENTER TEXT */}
-    <text
-      x="260"
-      y="250"
-      textAnchor="middle"
-      fill="white"
-      fontSize="22"
-      fontWeight="bold"
-    >
-      Insights
-    </text>
+  <text
+    x="260"
+    y="275"
+    textAnchor="middle"
+    fill="white"
+    fontSize="22"
+    fontWeight="bold"
+  >
+    {showMessage ? "Begins Here" : "Discovery"}
+  </text>
 
-    <text
-      x="260"
-      y="275"
-      textAnchor="middle"
-      fill="white"
-      fontSize="22"
-      fontWeight="bold"
-    >
-      Discovery
-    </text>
+  <text
+    x="260"
+    y="300"
+    textAnchor="middle"
+    fill="white"
+    fontSize="14"
+    opacity="0.9"
+  >
+    {showMessage ? "Create your own path" : "Understanding"}
+  </text>
 
-    <text
-      x="260"
-      y="300"
-      textAnchor="middle"
-      fill="white"
-      fontSize="14"
-      opacity="0.9"
-    >
-      Understanding
-    </text>
+  <text
+    x="260"
+    y="318"
+    textAnchor="middle"
+    fill="white"
+    fontSize="14"
+    opacity="0.9"
+  >
+    {showMessage ? "with Insights tools" : "yourself and others"}
+  </text>
+</svg>
 
-    <text
-      x="260"
-      y="318"
-      textAnchor="middle"
-      fill="white"
-      fontSize="14"
-      opacity="0.9"
-    >
-      yourself and others
-    </text>
-  </svg>
+
 </div>
 
 

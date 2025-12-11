@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiBookOpen } from "react-icons/fi";
-import { AiOutlineMessage } from "react-icons/ai";
-import { AiOutlineTeam } from "react-icons/ai";
+import { AiOutlineMessage, AiOutlineTeam } from "react-icons/ai";
 import { HiLightBulb } from "react-icons/hi";
 import { RiTeamLine } from "react-icons/ri";
 
@@ -13,7 +12,6 @@ export default function DeliveryFormatSection() {
       className="
         py-20 
         w-full 
-        h-[450px]
         bg-gradient-to-b 
         from-[#5454AB]/10 
         to-[#5454AB]/5
@@ -23,22 +21,22 @@ export default function DeliveryFormatSection() {
     >
       {/* Heading */}
       <motion.div
-        className="text-center max-w-2xl mx-auto px-3"
+        className="text-center max-w-2xl mx-auto px-4 sm:px-6"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-[45px] font-semibold text-[#111122]">
+        <h2 className="text-3xl sm:text-4xl md:text-[45px] font-semibold text-[#111122]">
           DELIVERY FORMAT
         </h2>
-        <p className="text-gray-600 text-[20px]">
+        <p className="text-gray-600 text-base sm:text-lg md:text-[20px] mt-2">
           Flexible approach tailored to your needs
         </p>
       </motion.div>
 
-      {/* ANIMATED CONNECTING LINE */}
-      <div className="relative container mx-auto px-6 mt-20">
+      {/* Animated connecting line */}
+      <div className="relative container mx-auto px-4 sm:px-6 mt-14">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: "80%" }}
@@ -51,42 +49,38 @@ export default function DeliveryFormatSection() {
             h-[3px] 
             bg-[#5454AB]/80 
             rounded-full
-            top-[52px]
+            top-[42px] sm:top-[52px]
             z-0
           "
         ></motion.div>
       </div>
 
       {/* Cards */}
-      <div className="container mx-auto px-6 mt-10 grid grid-cols-2 md:grid-cols-5 gap-10 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-10 relative z-10">
         <DeliveryCard
-          icon={<FiBookOpen className="text-[#5454AB] text-4xl" />}
+          icon={<FiBookOpen className="text-[#5454AB] text-3xl sm:text-4xl" />}
           title="Training"
-          delay={1.1}
+          delay={0.1}
         />
-
         <DeliveryCard
-          icon={<AiOutlineMessage className="text-[#5454AB] text-4xl" />}
+          icon={<AiOutlineMessage className="text-[#5454AB] text-3xl sm:text-4xl" />}
           title="Coaching"
-          delay={1.3}
+          delay={0.3}
         />
-
         <DeliveryCard
-          icon={<AiOutlineTeam className="text-[#5454AB] text-4xl" />}
+          icon={<AiOutlineTeam className="text-[#5454AB] text-3xl sm:text-4xl" />}
           title="Mentoring"
-          delay={1.5}
+          delay={0.5}
         />
-
         <DeliveryCard
-          icon={<HiLightBulb className="text-[#5454AB] text-4xl" />}
+          icon={<HiLightBulb className="text-[#5454AB] text-3xl sm:text-4xl" />}
           title="Consulting"
-          delay={1.7}
+          delay={0.7}
         />
-
         <DeliveryCard
-          icon={<RiTeamLine className="text-[#5454AB] text-4xl" />}
+          icon={<RiTeamLine className="text-[#5454AB] text-3xl sm:text-4xl" />}
           title="Facilitation"
-          delay={1.9}
+          delay={0.9}
         />
       </div>
     </section>
@@ -106,7 +100,7 @@ function DeliveryCard({ icon, title, delay }) {
     >
       <div
         className="
-          w-24 h-24 
+          w-20 h-20 sm:w-24 sm:h-24
           bg-white 
           flex items-center justify-center 
           rounded-full 
@@ -121,7 +115,7 @@ function DeliveryCard({ icon, title, delay }) {
         {icon}
       </div>
 
-      <p className="text-[18px] text-center text-black font-semibold">
+      <p className="text-[16px] sm:text-[18px] text-center text-black font-semibold">
         {title}
       </p>
     </motion.div>

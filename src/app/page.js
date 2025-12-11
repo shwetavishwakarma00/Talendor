@@ -24,7 +24,11 @@ export default function Page() {
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>
+
+      
+
       <Founders/>
+
     </main>
   );
 }

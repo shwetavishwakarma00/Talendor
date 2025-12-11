@@ -6,7 +6,7 @@ import FlagshipProduct from "@/components/FlagshipProduct";
 import DeliveryFormat from "@/components/DeliveryFormat";
 import WhyTalendor from "@/components/WhyTalendor";
 import ScrollingShowCase from "@/components/ScrollingShowCase";
-import Footer from "@/components/Footer";
+
 
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>
-      <Footer/>
+      
     </main>
   );
 }

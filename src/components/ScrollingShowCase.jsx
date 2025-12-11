@@ -52,10 +52,10 @@ export default function ScrollingShowcase() {
 
   return (
     <div className="w-full min-h-screen flex flex-col lg:flex-row gap-16 
-                px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-24">
+                px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-24 mt-20">
 
   {/* LEFT — FIXED CENTERED */}
-  <div className="lg:w-1/3 sticky top-1/2 -translate-y-1/2 h-fit flex flex-col justify-center">
+  <div className="lg:w-1/3 sticky top-1/3 -translate-y-1/2 h-fit flex flex-col justify-center">
     <h1 className="text-4xl md:text-5xl font-semibold text-[#02285B] leading-tight text-center lg:text-left">
       Services
     </h1>
@@ -65,16 +65,16 @@ export default function ScrollingShowcase() {
   </div>
 
   {/* CENTER IMAGE — FIXED CENTERED */}
-  <div className="lg:w-1/3 sticky top-1/2 -translate-y-1/2 h-fit 
+  <div className="lg:w-1/3 sticky top-1/3 -translate-y-1/2 h-fit 
                   flex flex-col justify-center items-center">
     <motion.img
       key={activeIndex}
       src={scrollSections[activeIndex]?.image}
       alt={scrollSections[activeIndex]?.title || "service image"}
       className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 object-contain drop-shadow-xl"
-      initial={{ opacity: 0, scale: 0.95 }}
+      initial={{ opacity: 0, scale: 0.45 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.1 }}
     />
   </div>
 

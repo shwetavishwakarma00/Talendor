@@ -9,7 +9,7 @@
       "Future-Ready Organization",
       "Business-Enbaling Strategy"
     ],
-    "image": "/images/logo.png"
+    "image": "/images/team.png"
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
       "Thriving in Bussiness Leadereship"
 
     ],
-    "image": "/images/3.jpg"
+    "image": "/images/leader.png"
   },
   {
     "id": 3,
@@ -40,7 +40,7 @@
       "Reverse Metoring & Inclusive Innovation",
       "Working Smarter"
     ],
-    "image": "/images/1.jpg"
+    "image": "/images/soft-skills.png"
   },
    {
     "id": 4,
@@ -51,7 +51,7 @@
       "Builinding Multigenerational Teams",
       "Thriving & High-Performing Teams"
     ],
-    "image": "/images/2.jpg"
+    "image": "/images/collaboration.png"
   },
   {
     "id": 5,
@@ -66,7 +66,7 @@
       "Financial Wellness",
       "Social Connection"
     ],
-    "image": "/images/3.jpg"
+    "image": "/images/consultant.png"
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
       "Young HR Professional Mentoring",
       "Fututre HR Leader Metoring"
     ],
-    "image": "/images/4.jpg"
+    "image": "/images/growth.png"
   },
    {
     "id": 7,
@@ -92,7 +92,7 @@
       "Customer Delight Journey",
       "Service Exellence"
     ],
-    "image": "/images/2.jpg"
+    "image": "/images/user-experience.png"
   }
 
 

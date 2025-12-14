@@ -1,97 +1,102 @@
 {
-  "hero": {
-    "badge": "Our flagship product",
-    "title": "Insights Discovery: four colours, powerful self-awareness",
-    "description": "A simple four-colour model that helps people understand themselves, appreciate others, and unlock better collaboration at work.",
-    "primaryCta": "Explore programmes",
-    "secondaryCta": "Talk to an expert",
-    "image": {
-      "src": "/images/talendorp1.png",
-      "alt": "Insights Discovery four-colour wheel"
-    }
-  },
+  "products": [
+    {
+      "slug": "insights-discovery",
+      "hero": {
+        "badge": "Our flagship product",
+        "title": "Insights Discovery: four colours, powerful self-awareness",
+        "description": "A simple four-colour model that helps people understand themselves, appreciate others, and unlock better collaboration at work.",
+        "primaryCta": "Explore programmes",
+        "secondaryCta": "Talk to an expert",
+        "image": {
+          "src": "/images/talendorp1.png",
+          "alt": "Insights Discovery four-colour wheel"
+        }
+      },
 
-  "fourColourModel": {
-    "title": "The four-colour model",
-    "description": "Every person has a unique mix of Fiery Red, Sunshine Yellow, Earth Green and Cool Blue energies, shaping how they think, decide and communicate at work.",
-    "items": [
-      {
-        "title": "Fiery Red",
-        "desc": "Competitive, determined and purposeful; brings drive, focus and action.",
-        "color": "from-red-500 to-orange-400"
+      "fourColourModel": {
+        "title": "The four-colour model",
+        "description": "Every person has a unique mix of Fiery Red, Sunshine Yellow, Earth Green and Cool Blue energies, shaping how they think, decide and communicate at work.",
+        "items": [
+          {
+            "title": "Fiery Red",
+            "desc": "Competitive, determined and purposeful; brings drive, focus and action.",
+            "color": "from-red-500 to-orange-400"
+          },
+          {
+            "title": "Sunshine Yellow",
+            "desc": "Sociable, enthusiastic and persuasive; energises others and builds relationships.",
+            "color": "from-amber-400 to-orange-500"
+          },
+          {
+            "title": "Earth Green",
+            "desc": "Caring, encouraging and patient; creates stability, support and trust.",
+            "color": "from-emerald-500 to-lime-400"
+          },
+          {
+            "title": "Cool Blue",
+            "desc": "Cautious, precise and questioning; adds structure, quality and clarity.",
+            "color": "from-sky-500 to-blue-700"
+          }
+        ]
       },
-      {
-        "title": "Sunshine Yellow",
-        "desc": "Sociable, enthusiastic and persuasive; energises others and builds relationships.",
-        "color": "from-amber-400 to-orange-500"
+
+      "journey": {
+        "title": "Where can Insights Discovery take you?",
+        "description": "Use Insights Discovery as the foundation for leadership, team development and culture change, building a shared language that turns awareness into everyday behaviour.",
+        "areas": [
+          "Leadership development",
+          "Team effectiveness",
+          "Change and resilience",
+          "Engagement and culture",
+          "Sales, consulting & service",
+          "Coaching and mentoring"
+        ],
+        "image": {
+          "src": "/images/talendorp1.png",
+          "alt": "Insights Discovery journey wheel"
+        }
       },
-      {
-        "title": "Earth Green",
-        "desc": "Caring, encouraging and patient; creates stability, support and trust.",
-        "color": "from-emerald-500 to-lime-400"
+
+      "expertise": {
+        "badge": "Our areas of expertise",
+        "title": "Turning insight into everyday performance",
+        "description": "Programmes focus on the skills organisations need most, from trust and feedback to stakeholder management and inclusive leadership.",
+        "tags": [
+          "Coaching & mentoring",
+          "Team engagement",
+          "Improving performance",
+          "Trust and psychological safety",
+          "Developing potential",
+          "Managing stakeholders",
+          "Effective communication",
+          "Feedback that lands",
+          "Empathy and inclusion",
+          "Inspiring others"
+        ]
       },
-      {
-        "title": "Cool Blue",
-        "desc": "Cautious, precise and questioning; adds structure, quality and clarity.",
-        "color": "from-sky-500 to-blue-700"
+
+      "connectingTeams": {
+        "title": "Connecting teams across your organisation",
+        "description": "Workshops help people break down silos, communicate with clarity, and collaborate around shared goals using a common colour language.",
+        "points": [
+          "Highly interactive, facilitator-led experiences.",
+          "Practical tools that transfer back into day-to-day work.",
+          "Action plans that sustain behaviour change over time."
+        ],
+        "card": {
+          "badge": "Self-aware teams",
+          "text": "When people understand themselves and each other, they build stronger relationships, handle conflict constructively, and deliver better results together.",
+          "cta": "Book a discovery session"
+        }
+      },
+
+      "cta": {
+        "title": "Ready to start your Insights Discovery journey?",
+        "description": "Partner with our certified practitioners to design a programme that grows self-awareness, trust and performance across your teams.",
+        "primary": "Schedule a call",
+        "secondary": "Download overview"
       }
-    ]
-  },
-
-  "journey": {
-    "title": "Where can Insights Discovery take you?",
-    "description": "Use Insights Discovery as the foundation for leadership, team development and culture change, building a shared language that turns awareness into everyday behaviour.",
-    "areas": [
-      "Leadership development",
-      "Team effectiveness",
-      "Change and resilience",
-      "Engagement and culture",
-      "Sales, consulting & service",
-      "Coaching and mentoring"
-    ],
-    "image": {
-      "src": "/images/talendorp1.png",
-      "alt": "Insights Discovery journey wheel"
     }
-  },
-
-  "expertise": {
-    "badge": "Our areas of expertise",
-    "title": "Turning insight into everyday performance",
-    "description": "Programmes focus on the skills organisations need most, from trust and feedback to stakeholder management and inclusive leadership.",
-    "tags": [
-      "Coaching & mentoring",
-      "Team engagement",
-      "Improving performance",
-      "Trust and psychological safety",
-      "Developing potential",
-      "Managing stakeholders",
-      "Effective communication",
-      "Feedback that lands",
-      "Empathy and inclusion",
-      "Inspiring others"
-    ]
-  },
-
-  "connectingTeams": {
-    "title": "Connecting teams across your organisation",
-    "description": "Workshops help people break down silos, communicate with clarity, and collaborate around shared goals using a common colour language.",
-    "points": [
-      "Highly interactive, facilitator-led experiences.",
-      "Practical tools that transfer back into day-to-day work.",
-      "Action plans that sustain behaviour change over time."
-    ],
-    "card": {
-      "badge": "Self-aware teams",
-      "text": "When people understand themselves and each other, they build stronger relationships, handle conflict constructively, and deliver better results together.",
-      "cta": "Book a discovery session"
-    }
-  },
-
-  "cta": {
-    "title": "Ready to start your Insights Discovery journey?",
-    "description": "Partner with our certified practitioners to design a programme that grows self-awareness, trust and performance across your teams.",
-    "primary": "Schedule a call",
-    "secondary": "Download overview"
-  }
+  ]
 }

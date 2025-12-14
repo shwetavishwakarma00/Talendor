@@ -18,8 +18,9 @@
           "items": [
             {
               "label": "OUR FLAGSHIP PRODUCT",
-              "slug": "#"
+              "slug": "/products/insights-discovery"
             }
+            
           ]
         }
       ]

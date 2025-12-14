@@ -11,6 +11,7 @@ import Founders from "@/components/Founders";
 
 
 import ScrollingShowCase from "@/components/ScrollingShowCase";
+import ModalitiesSection from "@/components/ModalitiesSection";
 
 
 
@@ -24,9 +25,7 @@ export default function Page() {
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>
-
-      
-
+      <ModalitiesSection/>
       <Founders/>
 
     </main>

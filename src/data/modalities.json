@@ -1,0 +1,39 @@
+{
+  "modalities": [
+    {
+      "id": "training",
+      "title": "Training",
+      "shortDescription": "Structured learning programs to build core skills.",
+      "fullDescription": "Training is an organized process of teaching skills, imparting knowledge, and building competencies. We work closely with business and HR teams to design result-oriented training programs delivered by expert facilitators.",
+      "image": "/images/mod1.png"
+    },
+    {
+      "id": "coaching",
+      "title": "Coaching",
+      "shortDescription": "One-on-one and group coaching for growth.",
+      "fullDescription": "Coaching is a collaborative process that builds awareness and unlocks potential. It can be delivered as a standalone engagement or embedded within leadership and development programs.",
+      "image": "/images/mod2.png"
+    },
+    {
+      "id": "mentoring",
+      "title": "Mentoring",
+      "shortDescription": "Learning from experienced leaders.",
+      "fullDescription": "Mentoring connects experienced professionals with emerging talent to share insights, guidance, and real-world wisdom that accelerates professional growth.",
+      "image": "/images/mod3.png"
+    },
+    {
+      "id": "facilitation",
+      "title": "Facilitation",
+      "shortDescription": "Guided group processes for clarity.",
+      "fullDescription": "Facilitation helps groups achieve outcomes such as decision-making, alignment, and problem-solving through structured, participative processes.",
+      "image": "/images/mod4.png"
+    },
+    {
+      "id": "consulting",
+      "title": "Consulting",
+      "shortDescription": "Expert advice and solutions.",
+      "fullDescription": "Consulting involves diagnosing business challenges and delivering practical, actionable solutions that drive performance and organizational effectiveness.",
+      "image": "/images/mod5.png"
+    }
+  ]
+}

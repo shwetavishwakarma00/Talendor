@@ -1,159 +1,189 @@
 "use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
+import data from "@/data/products.json";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * i,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
+
 export default function InsightsDiscoveryPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-900">
+    <main className="min-h-screen bg-white text-slate-900">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-500 to-orange-400 text-white">
+        <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
 
-      {/* ================= HERO SECTION (NOT CENTERED) ================= */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50">
-        <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-blue-500/30 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-sky-500/30 blur-3xl" />
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-20 md:flex-row md:justify-between">
+          <motion.div
+            className="max-w-xl"
+            initial="hidden"
+            animate="visible"
+            custom={0}
+            variants={fadeUp}
+          >
+            <p className="text-xs uppercase tracking-[0.25em] text-purple-100">
+              {data.hero.badge}
+            </p>
 
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20 md:py-28 flex flex-col md:flex-row gap-12">
-
-          {/* LEFT HERO CONTENT */}
-          <div className="flex-1 text-center md:text-left">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-900/60 px-3 py-1 text-xs font-medium text-slate-200 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-              Insights Discovery
-            </span>
-
-            <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
-              Understand yourself{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
-                and others
-              </span>
+            <h1 className="mt-3 text-3xl font-bold md:text-4xl">
+              {data.hero.title}
             </h1>
 
-            <p className="mt-4 text-base sm:text-lg text-slate-300">
-              Insights Discovery is a simple four-colour model that helps people understand themselves and others.
+            <p className="mt-4 text-sm md:text-base text-purple-100/80">
+              {data.hero.description}
             </p>
 
-            <p className="mt-4 text-sm sm:text-base text-slate-400">
-              Create your own journey with Insights Discovery and unlock stronger communication.
-            </p>
-
-            <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-              <button className="group inline-flex items-center gap-2 rounded-full bg-slate-50 px-6 py-3 text-sm font-semibold text-slate-900 shadow-xl shadow-blue-500/20 transition hover:-translate-y-0.5 hover:bg-blue-100/90">
-                Start your Insights journey
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-[11px] text-blue-300 group-hover:bg-slate-800">
-                  →
-                </span>
+            <div className="mt-6 flex gap-3">
+              <button className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-purple-700">
+                {data.hero.primaryCta}
               </button>
-
-              <button className="inline-flex items-center gap-2 text-sm font-medium text-slate-200/80 hover:text-blue-200">
-                Where can it take you?
-                <span className="text-xs">◆</span>
+              <button className="rounded-full border border-white/40 px-6 py-2 text-sm font-semibold">
+                {data.hero.secondaryCta}
               </button>
             </div>
-          </div>
+          </motion.div>
 
-          {/* RIGHT HERO CARD */}
-          <div className="flex-1">
-            <div className="relative mx-auto max-w-xs sm:max-w-sm md:max-w-md pt-10">
-              <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-tr from-blue-400/40 via-sky-500/30 to-cyan-300/40 blur-2xl opacity-80" />
-
-              <div className="relative rounded-3xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.9)] backdrop-blur-xl">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="mt-1 text-sm sm:text-base font-semibold text-slate-50">
-                      A simple way to see behaviour.
-                    </p>
-                  </div>
-
-                  <div className="flex gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-red-400" />
-                    <span className="h-2 w-2 rounded-full bg-yellow-300" />
-                    <span className="h-2 w-2 rounded-full bg-green-400" />
-                    <span className="h-2 w-2 rounded-full bg-sky-400" />
-                  </div>
-                </div>
-
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
-                  <div className="rounded-2xl bg-slate-950/60 p-4 ring-1 ring-slate-700/80">
-                    <p className="text-xs uppercase tracking-[0.16em] text-slate-400">What it is</p>
-                    <p className="mt-2 text-[13px] text-slate-200">
-                      Uses colour energies to understand styles.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl bg-slate-950/60 p-4 ring-1 ring-slate-700/80">
-                    <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Why it matters</p>
-                    <p className="mt-2 text-[13px] text-slate-200">
-                      Improves collaboration + performance.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-slate-950/70 px-4 py-3 ring-1 ring-slate-700/80 text-center">
-                  <p className="text-[13px] text-slate-300">Use Insights Discovery as the foundation.</p>
-                  <span className="hidden sm:inline rounded-full bg-blue-400/15 px-3 py-1 text-[12px] font-semibold text-blue-200 ring-1 ring-blue-400/60">
-                    Your starting point
-                  </span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
+          <motion.div
+            className="relative h-60 w-60 md:h-72 md:w-72"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+            <Image
+              src={data.hero.image.src}
+              alt={data.hero.image.alt}
+              fill
+              className="object-contain"
+            />
+          </motion.div>
         </div>
       </section>
 
-      {/* ================= INTRO SECTION (CENTERED) ================= */}
-      <section className="bg-slate-50 py-16 text-center">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <p className="text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.18em] text-black">
-            Insights Discovery
-          </p>
-
-          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-black">
-            Where can Insights Discovery take you?
+      {/* Four colour model */}
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <motion.div
+          className="text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={0}
+          variants={fadeUp}
+        >
+          <h2 className="text-2xl font-semibold">
+            {data.fourColourModel.title}
           </h2>
-
-          <p className="mt-4 text-sm sm:text-base text-slate-600">
-            Create your own journey with Insights Discovery as the foundation.
+          <p className="mt-3 text-slate-600">
+            {data.fourColourModel.description}
           </p>
+        </motion.div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {data.fourColourModel.items.map((item, idx) => (
+            <motion.article
+              key={item.title}
+              className="rounded-2xl border p-5"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={idx + 1}
+              variants={fadeUp}
+            >
+              <div
+                className={`h-1 w-full rounded-full bg-gradient-to-r ${item.color}`}
+              />
+              <h3 className="mt-3 font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
+            </motion.article>
+          ))}
         </div>
       </section>
 
-      {/* ================= KEY AREAS ================= */}
-      <section className="bg-slate-50 pb-20 text-center">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-            World-renowned expertise
-          </p>
+      {/* Journey */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6 py-16 grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-2xl font-semibold">
+              {data.journey.title}
+            </h2>
+            <p className="mt-3 text-slate-600">
+              {data.journey.description}
+            </p>
 
-          <h3 className="mt-2 text-xl sm:text-2xl md:text-3xl font-semibold">
-            5 key areas where Insights Discovery creates impact.
-          </h3>
+            <div className="mt-6 grid sm:grid-cols-2 gap-4">
+              {data.journey.areas.map((area) => (
+                <div key={area} className="bg-white p-3 rounded-xl shadow-sm">
+                  {area}
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AreaCard iconLabel="TE" title="Team Effectiveness" description="Helping teams work better together." />
-            <AreaCard iconLabel="LD" title="Leadership Development" description="Developing leaders with awareness." />
-            <AreaCard iconLabel="CR" title="Change & Resilience" description="Supporting people through transitions." />
-            <AreaCard iconLabel="EC" title="Engagement & Culture" description="Building positive workplace cultures." />
-            <AreaCard iconLabel="SC" title="Sales & Service" description="Improving communication & relationships." />
+          <div className="relative h-64 w-64 mx-auto">
+            <Image
+              src={data.journey.image.src}
+              alt={data.journey.image.alt}
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </section>
 
+      {/* Expertise */}
+      <section className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <p className="text-xs uppercase tracking-widest text-purple-600">
+          {data.expertise.badge}
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold">
+          {data.expertise.title}
+        </h2>
+        <p className="mt-3 text-slate-600">
+          {data.expertise.description}
+        </p>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {data.expertise.tags.map((tag, i) => (
+            <motion.span
+              key={tag}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={i + 1}
+              variants={fadeUp}
+              className="rounded-full bg-slate-100 px-4 py-2 text-sm"
+            >
+              {tag}
+            </motion.span>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-6 py-14">
+        <div className="rounded-3xl bg-gradient-to-r from-purple-600 to-orange-400 text-center text-white p-10">
+          <h2 className="text-2xl font-semibold">{data.cta.title}</h2>
+          <p className="mt-3">{data.cta.description}</p>
+          <div className="mt-6 flex justify-center gap-3">
+            <button className="bg-white text-purple-700 px-6 py-2 rounded-full">
+              {data.cta.primary}
+            </button>
+            <button className="border border-white px-6 py-2 rounded-full">
+              {data.cta.secondary}
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-  );
-}
-
-/* ================= AREA CARD COMPONENT ================= */
-function AreaCard({ iconLabel, title, description }) {
-  return (
-    <div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-100 transition hover:-translate-y-1 hover:border-slate-900/70 hover:shadow-xl text-center">
-      <div className="mx-auto inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-xs font-semibold text-slate-50 group-hover:bg-slate-800">
-        {iconLabel}
-      </div>
-
-      <h4 className="mt-4 text-sm sm:text-base font-semibold text-slate-900">
-        {title}
-      </h4>
-
-      <p className="mt-2 text-sm text-slate-600">{description}</p>
-    </div>
   );
 }

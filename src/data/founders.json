@@ -3,20 +3,86 @@
     {
       "name": "Anita Chandola",
       "title": "Executive Search Consultant",
+      "slug":"anita-chandola",
       "description": [
         "Anita has spent nearly 15 years to find best fit talent for organizations from different industries including FMCG, Hospitality, Management Consulting, Banking, Aviation, etc.",
         "Anita is a passionate Executive Search Consultant and loves to spend time with family, friends and singing."
       ],
-      "image": "/images/anita_chandola.webp"
+      "image": "/images/anita_chandola.webp",
+      "experienceSummary": [
+        "With 20+ years of global HR experience, Praveen is passionate about people and organizational development, he has held key roles including Head HR, HR Business Partner across India, APAC, Middle East, Russia, and Latin America, and Global HR CoE Leader at Sennheiser.",
+        "Expert in building scalable processes, driving global talent strategies, and enabling cultural and organizational transformation.",
+        "Self-driven, self-aware, nature and adventure lover with continuous learning mindset and humble attitude.",
+        "Foundation Team member of India entity & build HR foundations across regions.",
+        "Led, developed & implemented global talent, leadership, and performance programs.",
+        "Driven multiple large global culture transformation and org redesign.",
+        "Successfully planned & executed complex business M&A & carve-outs.",
+        "Delivered HR digital transformation via HRIS, LMS & Intranet.",
+        "Core Global team member of DEI, wellbeing, and sustainability initiatives.",
+        "Enhanced talent acquisition, retention, and L&D impact.",
+        "Trusted partner to business leaders, aligning HR & business strategy."
+      ],
+      "continuousLearning": [
+        "2550 hours Training & Facilitation Experience",
+        "310 hours of Coaching Experience",
+        "Performance Management, IIM Kolkata",
+        "Master Trainer & Facilitator, Dale Carnegie",
+        "Master Coach, Erickson International",
+        "Insights Discovery Psychometric, UK",
+        "Team Management Systems, Australia",
+        "NLP Practitioner, NFNLP",
+        "Competence Developer, Carlton University",
+        "Inner Engineering, Isha Foundation",
+        "Being Centered Leader, Impossible TF",
+        "PGC HR, XLRI",
+        "Science Graduate, HNBGU"
+      ],
+      "contact": {
+        "mobile": "+91-9818711851",
+        "email": "praveen@talendor.in"
+      }
     },
     {
       "name": "Praveen Chandola",
       "title": "Strategic HR Consultant, Executive Coach & Trainer",
+      "slug":"praveen-chandola",
       "description": [
         "Praveen is a results-driven HR professional, Executive Coach & Trainer with 20+ years of strategic global experience in Human Resource and Operations.",
         "Praveen is self-driven, nature and adventure lover, continues learning mindset person with humble attitude towards life."
       ],
-      "image": "/images/praveen_chandola.webp"
+      "image": "/images/praveen_chandola.png",
+      "experienceSummary": [
+        "With 20+ years of global HR experience, Praveen is passionate about people and organizational development, he has held key roles including Head HR, HR Business Partner across India, APAC, Middle East, Russia, and Latin America, and Global HR CoE Leader at Sennheiser.",
+        "Expert in building scalable processes, driving global talent strategies, and enabling cultural and organizational transformation.",
+        "Self-driven, self-aware, nature and adventure lover with continuous learning mindset and humble attitude.",
+        "Foundation Team member of India entity & build HR foundations across regions.",
+        "Led, developed & implemented global talent, leadership, and performance programs.",
+        "Driven multiple large global culture transformation and org redesign.",
+        "Successfully planned & executed complex business M&A & carve-outs.",
+        "Delivered HR digital transformation via HRIS, LMS & Intranet.",
+        "Core Global team member of DEI, wellbeing, and sustainability initiatives.",
+        "Enhanced talent acquisition, retention, and L&D impact.",
+        "Trusted partner to business leaders, aligning HR & business strategy."
+      ],
+      "continuousLearning": [
+        "2550 hours Training & Facilitation Experience",
+        "310 hours of Coaching Experience",
+        "Performance Management, IIM Kolkata",
+        "Master Trainer & Facilitator, Dale Carnegie",
+        "Master Coach, Erickson International",
+        "Insights Discovery Psychometric, UK",
+        "Team Management Systems, Australia",
+        "NLP Practitioner, NFNLP",
+        "Competence Developer, Carlton University",
+        "Inner Engineering, Isha Foundation",
+        "Being Centered Leader, Impossible TF",
+        "PGC HR, XLRI",
+        "Science Graduate, HNBGU"
+      ],
+      "contact": {
+        "mobile": "+91-9818711851",
+        "email": "praveen@talendor.in"
+      }
     }
   ]
 }

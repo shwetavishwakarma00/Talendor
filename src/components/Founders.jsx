@@ -65,7 +65,7 @@ const Founders = () => {
             </div>
 
             <div className="mt-3 md:mt-4 flex gap-4 text-[#4F4F4A]">
-              <Link href="/founders" className="text-blue-500 text-sm md:text-base">
+              <Link  href={`/founders/${founders.founders[index].slug}`} className="text-blue-500 text-sm md:text-base">
                 Learn more
               </Link>
             </div>

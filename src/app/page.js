@@ -5,8 +5,13 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import FlagshipProduct from "@/components/FlagshipProduct";
 import DeliveryFormat from "@/components/DeliveryFormat";
 import WhyTalendor from "@/components/WhyTalendor";
+
+
 import Founders from "@/components/Founders";
+
+
 import ScrollingShowCase from "@/components/ScrollingShowCase";
+import ModalitiesSection from "@/components/ModalitiesSection";
 
 
 
@@ -20,9 +25,7 @@ export default function Page() {
       <FlagshipProduct/>
       <DeliveryFormat/>
       <WhyTalendor/>
-
-      
-
+      <ModalitiesSection/>
       <Founders/>
 
     </main>

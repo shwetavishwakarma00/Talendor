@@ -1,0 +1,325 @@
+{
+  "strategic-hr-consulting": {
+    "title": "Strategic HR Consulting Services",
+    "sections": [
+      {
+        "heading": "Executive & Leadership Services",
+        "items": [
+          "Executive Search: Identifying and onboarding transformational senior talent",
+          "Virtual CHRO / CLO Services: Fractional leadership support for HR & Learning strategy",
+          "M&A, Culture shaping, Change management, and performance alignment"
+        ]
+      },
+      {
+        "heading": "Unleashing Talent Potential",
+        "items": [
+          "Talent Assessment & Identification",
+          "Succession Planning & Critical Role Mapping & Career Track Design",
+          "Development & Performance Improvement Planning",
+          "Curated Learning Journeys: Personalized capability-building pathways"
+        ]
+      },
+      {
+        "heading": "Future-Ready Organization",
+        "items": [
+          "Organization Development (OD): Capability, agility & effectiveness enhancement",
+          "Culture Development & Transformation: Purpose-driven engagement & alignment",
+          "Structural Efficiency & Effectiveness: Optimization of systems, roles & workflows",
+          "Change Management: Strategic, behavioral, and people-centered change enablement"
+        ]
+      },
+      {
+        "heading": "Business-Enabling HR Strategy",
+        "items": [
+          "HR Strategy Development: Aligning people plans to business priorities",
+          "HR Diagnostics & Audits: Assessing maturity, gaps, and readiness",
+          "HR Function Set-Up: Building HR functions enabling growth, culture & compliance",
+          "Future of Work: DEI, Wellbeing & Sustainability frameworks"
+        ]
+      }
+    ]
+  },
+
+  "leadership-development-journeys": {
+    "title": "Leadership Development Journeys",
+    "sections": [
+      {
+        "heading": "Foundational Leadership Programs",
+        "items": [
+          "New Manager Bootcamps",
+          "Leadership Essentials Workshops",
+          "Manager as Coach Training",
+          "Emotional Intelligence & Self-Awareness Labs"
+        ]
+      },
+      {
+        "heading": "Advanced Leadership Development",
+        "items": [
+          "Strategic Thinking & Decision-Making",
+          "Influencing Without Authority",
+          "Cross-Functional Leadership Labs",
+          "Leading in Complexity / VUCA / BANI World"
+        ]
+      },
+      {
+        "heading": "Executive & C-Suite Development",
+        "items": [
+          "Executive Coaching (1:1 or Group)",
+          "Leadership Masterclasses & Retreats",
+          "Boardroom Readiness Labs",
+          "Authentic Leadership & Legacy Building"
+        ]
+      },
+      {
+        "heading": "Global, Inclusive & Cross-Cultural Leadership",
+        "items": [
+          "Inclusive Leadership & Bias Awareness Workshops",
+          "Global Mindset & Cultural Intelligence Training",
+          "Leading Multigenerational & Multicultural Teams",
+          "Aligning Leadership with ESG & Sustainability Goals"
+        ]
+      },
+      {
+        "heading": "Discovering Self & Executive Presence",
+        "items": [
+          "Leadership Mindset & Identity",
+          "Executive Presence & Influence",
+          "Emotional Intelligence & Mindfulness",
+          "Stress Tolerance & Resilience",
+          "Adaptability in VUCA / BANI Environments"
+        ]
+      },
+      {
+        "heading": "Leading Teams & Building Thriving Cultures",
+        "items": [
+          "High-Performing & Self-Organized Teams",
+          "Team Effectiveness & Psychological Safety",
+          "Multigenerational & Multicultural Leadership",
+          "Problem-Solving & Critical Thinking",
+          "Empathetic Communication & Coaching"
+        ]
+      },
+      {
+        "heading": "Thriving in Business Leadership",
+        "items": [
+          "Ownership & Accountability",
+          "Strategic Thinking, Planning & Execution",
+          "Strategic Selling & Influencing Without Authority",
+          "Key Account & Stakeholder Management",
+          "Project Leadership & Execution Excellence"
+        ]
+      }
+    ]
+  },
+
+  "reskilling-programs": {
+    "title": "Reskilling Programs",
+    "sections": [
+      {
+        "heading": "Leading Self in VUCA / BANI",
+        "items": [
+          "Problem-Solving, Critical Thinking & Adaptability",
+          "Resilience, Stress Tolerance & Flexibility",
+          "Emotional Intelligence & Empathetic Leadership",
+          "Mindfulness & Mental Agility"
+        ]
+      },
+      {
+        "heading": "Strategic Capability & Commercial Impact",
+        "items": [
+          "Ownership, Accountability & Decision-Making",
+          "Strategic Thinking, Planning & Execution",
+          "Intercultural Awareness & Global Leadership",
+          "Strategic Selling, Negotiation & Influencing",
+          "Key Account Management",
+          "Project Management & Delivery Agility"
+        ]
+      },
+      {
+        "heading": "Self-Mastery & Mindset Expansion",
+        "items": [
+          "Inner Mastery: Clarifying clarity, values & confidence",
+          "Reflective Self-Development & Journaling Practices",
+          "Neuro Leadership Fundamentals",
+          "Brain-Based Personal Development Strategies"
+        ]
+      },
+      {
+        "heading": "Understanding Generational Differences",
+        "items": [
+          "Generational DNA, Traits & Motivators",
+          "Debunking Myths & Biases Across Generations",
+          "Multigenerational Mix: Leveraging Diverse Strengths"
+        ]
+      },
+      {
+        "heading": "Working Effectively with Gen Z",
+        "items": [
+          "Gen Z Communication: Fast feedback & transparency",
+          "Purpose & Personal Growth Pathways",
+          "Digital Dexterity & Entrepreneurial Mindset",
+          "Authenticity & Inclusion at Work"
+        ]
+      },
+      {
+        "heading": "Reverse Mentoring & Inclusive Innovation",
+        "items": [
+          "Reverse Mentoring Programs",
+          "Generational Innovation Circles",
+          "Intergenerational Decision-Making Practices"
+        ]
+      },
+      {
+        "heading": "Working Smarter",
+        "items": [
+          "Time Management & Productivity Hacks",
+          "Organizing Work Efficiently",
+          "Effective Hybrid Communication",
+          "Giving & Receiving Feedback",
+          "Understanding Different Personalities & Work Styles"
+        ]
+      }
+    ]
+  },
+
+  "team-development-journeys": {
+    "title": "Team Development Journeys",
+    "sections": [
+      {
+        "heading": "Foundations of Team Happiness & Trust",
+        "items": [
+          "Psychological Safety & Belonging",
+          "Purpose-Driven Team Vision",
+          "Empathy & Active Listening Practices",
+          "Celebration & Recognition Rituals"
+        ]
+      },
+      {
+        "heading": "Building Multigenerational Teams",
+        "items": [
+          "Motivation & Engagement Across Ages",
+          "Flexible Leadership Styles",
+          "Cross-Generational Collaboration Labs",
+          "Conflict Management & Communication Styles"
+        ]
+      },
+      {
+        "heading": "Thriving & High-Performing Teams",
+        "items": [
+          "Building High-Performing Teams",
+          "Fostering Self-Organized & Autonomous Teams",
+          "Enhancing Teamwork Effectiveness",
+          "Psychological Safety & Empathic Communication"
+        ]
+      }
+    ]
+  },
+
+  "wellbeing": {
+    "title": "Wellbeing",
+    "sections": [
+      {
+        "heading": "Retreats",
+        "items": [
+          "Soulful, immersive experiences to reconnect with inner peace"
+        ]
+      },
+      {
+        "heading": "Stress Management",
+        "items": [
+          "Coping strategies, mindfulness & breathing techniques"
+        ]
+      },
+      {
+        "heading": "Emotional Intelligence",
+        "items": [
+          "Self-awareness, empathy & relationship management"
+        ]
+      },
+      {
+        "heading": "Resilience Building",
+        "items": [
+          "Adaptability, grit & positive psychology"
+        ]
+      },
+      {
+        "heading": "Work-Life Balance",
+        "items": [
+          "Time management, boundary setting & digital detox"
+        ]
+      },
+      {
+        "heading": "Financial Wellness",
+        "items": [
+          "Agile financial planning for life goals"
+        ]
+      },
+      {
+        "heading": "Social Connection",
+        "items": [
+          "Team bonding, peer support & community engagement"
+        ]
+      }
+    ]
+  },
+
+  "coaching-mentoring": {
+    "title": "Key Coaching & Mentoring Offerings",
+    "sections": [
+      {
+        "heading": "Coaching",
+        "items": [
+          "Individual Development Coaching",
+          "Onboarding Transition Coaching",
+          "Job Role Transition Coaching",
+          "Leadership Development Coaching",
+          "Career Coaching",
+          "Business Coaching"
+        ]
+      },
+      {
+        "heading": "Mentoring",
+        "items": [
+          "Young HR Professional Mentoring",
+          "Future HR Leader Mentoring",
+          "First-Time Manager Mentoring",
+          "Future People Leader Mentoring",
+          "Executive Leader Mentoring"
+        ]
+      }
+    ]
+  },
+
+  "customer-delight-programs": {
+    "title": "Customer Delight Programs",
+    "sections": [
+      {
+        "heading": "Moments of Magic",
+        "items": [
+          "Grooming & Etiquette",
+          "Basic Communication & Listening Skills",
+          "Handling Difficult Customers & Situations",
+          "Complaint Resolution & Customer Feedback"
+        ]
+      },
+      {
+        "heading": "Customer Delight Journey",
+        "items": [
+          "Understanding & Reducing Customer Pain Points",
+          "Empathetic Servicing",
+          "Handling Complaints with Grace",
+          "Creating Surprise & WOW Moments"
+        ]
+      },
+      {
+        "heading": "Service Excellence",
+        "items": [
+          "Communication Mastery",
+          "Customer Delight & Experience Design",
+          "Customer Feedback & Continuous Improvement",
+          "Train-the-Trainer Programs"
+        ]
+      }
+    ]
+  }
+}

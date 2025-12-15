@@ -1,0 +1,69 @@
+{
+  "navItems": [
+    {
+      "label": "Home",
+      "key": "home"
+    },
+    {
+      "label": "About Us",
+      "key": "about us",
+      "slug":"/aboutus"
+    },
+    {
+      "label": "Products",
+      "key": "products",
+      "columns": [
+        {
+          "title": "Products",
+          "items": [
+            {
+              "label": "OUR FLAGSHIP PRODUCT",
+              "slug": "/products/insights-discovery"
+            }
+            
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "key": "services",
+      "columns": [
+        {
+          "title": "Services",
+          "items":[
+            {
+                "label":"STRATEGIC HR CONSULTING SERVICES",
+                "slug":"/services/strategic-hr-consulting"
+            },
+            {
+                "label":"Reskilling Programs",
+                "slug":"/services/reskilling-programs"   
+            },
+            {
+                "label":"Leadership Development Journeys",
+                "slug":"/services/leadership-development-journeys"
+            },
+            {
+                "label":"Team Development Journeys",
+                "slug":"/services/team-development-journeys"
+            },
+            {
+                "label":"Wellbeing",
+                "slug":"/services/wellbeing"
+            },
+            {
+                "label":"Key Coaching & Mentoring Offerings",
+                "slug":"/services/coaching-mentoring"
+            },
+            {
+                "label": "Customer Delight Programs",
+                "slug":"/services/customer-delight-programs"
+            }
+          ]
+        }
+      ]
+    }
+    
+  ]
+}

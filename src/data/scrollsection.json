@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "slug":"strategic-hr-consulting",
     "title": "STRATEGIC HR CONSULTING SERVICES",
     "description": "Build core leadership fundamentals for emerging leaders.",
     "bullets": [
@@ -12,7 +12,7 @@
     "image": "/images/team.png"
   },
   {
-    "id": 2,
+    "slug":"leadership-development-journeys",
     "title": "LEADERSHIP DEVELOPMENT JOURNEYS ",
     "description": "Shift workloads to the cloud securely with automated best-practice deployment frameworks.",
     "bullets": [
@@ -28,7 +28,7 @@
     "image": "/images/leader.png"
   },
   {
-    "id": 3,
+    "slug":"reskilling-programs",
     "title": "RESKILLING PROGRAMS",
     "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
     "bullets": [
@@ -43,7 +43,7 @@
     "image": "/images/soft-skills.png"
   },
    {
-    "id": 4,
+    "slug":"team-development-journeys",
     "title": "TEAM DEVLOPMENT JOURNEYS",
     "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
     "bullets": [
@@ -54,7 +54,7 @@
     "image": "/images/collaboration.png"
   },
   {
-    "id": 5,
+    "slug":"wellbeing",
     "title": "WELBEING",
     "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
     "bullets": [
@@ -69,7 +69,7 @@
     "image": "/images/consultant.png"
   },
   {
-    "id": 6,
+    "slug":"coaching-mentoring",
     "title": "KEY COACHING & MENTORING OFFERINGS",
     "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
     "bullets": [
@@ -84,7 +84,7 @@
     "image": "/images/growth.png"
   },
    {
-    "id": 7,
+    "slug":"customer-delight-programs",
     "title": "CUSTOMER DELIGHT PROGRAMS",
     "description": "Build modern data platforms with real-time, AI-driven intelligence for enterprise scale.",
     "bullets": [

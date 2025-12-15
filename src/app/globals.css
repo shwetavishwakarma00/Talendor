@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --primary: #5454AB;
+  --primary-light: #7979D1;
+  --background-gray: #F4F4F7;
+  --text-gray: #333333;
+  --light-gray: #777777;
+
+  --font-roboto: 'Roboto', sans-serif;
+}

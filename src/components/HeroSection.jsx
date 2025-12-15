@@ -94,11 +94,7 @@ export default function HeroSection() {
         {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
         <div className="flex-1 relative hidden md:block">
 
-          {/* Waves */}
-          <motion.svg className="absolute top-24 left-16 w-[500px] z-20" viewBox="0 0 400 120" fill="none"
-            animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
-            <path d="M0 60 C100 120 300 0 400 60" stroke="#E19D36" strokeWidth="3" opacity="0.4" />
-          </motion.svg>
+          
 
           {/* Circle Image */}
           <motion.div

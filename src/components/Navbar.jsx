@@ -30,7 +30,7 @@ export default function Navbar() {
               
             >
               {item.slug ? (
-                <Link href={item.slug} className="hover:text-[#43438f]">
+                <Link href={item.slug} className=" hover:text-[#43438f]">
                   {item.label}
                 </Link>
               ) : (

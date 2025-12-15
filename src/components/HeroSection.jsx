@@ -7,81 +7,103 @@ import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="w-full min-h-screen relative overflow-hidden mt-10 pb-10 bg-gradient-to-b from-purple-50 to-white">
+    <section className="w-full min-h-[700px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
 
-      {/* BACKGROUND BLOBS (desktop only) */}
-      <motion.div className="hidden md:block absolute -top-20 -right-20 w-72 h-72 bg-purple-300 rounded-full opacity-30 blur-3xl animate-blob" />
-      <motion.div className="hidden md:block absolute bottom-[-120px] right-[-120px] w-72 h-72 bg-orange-300 rounded-full opacity-30 blur-3xl animate-blob animation-delay-2000" />
-      <motion.div
-        className="hidden md:block absolute top-10 -left-32 w-96 h-96 bg-purple-300 rounded-full opacity-30 blur-3xl animate-blob"
-        style={{ animationDelay: "1s" }}
-      />
+      {/* Background Blobs (ALL DEVICES) */}
+      <motion.div className="absolute -top-10 -right-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
+      <motion.div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob animation-delay-2000" />
+      <motion.div className="absolute top-10 -left-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
 
-      <div className="container mx-auto px-20 flex flex-col lg:flex-row items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10">
 
-        {/* LEFT TEXT */}
+        {/* TEXT SECTION */}
         <motion.div
-          className="flex-1"
-          initial={{ opacity: 0, y: 40 }}
+          className="flex-1 text-center lg:text-left"
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
         >
-          <p className="text-sm text-gray-500 mb-2">HR EXCELLENCE REDEFINED</p>
+          <motion.p
+            className="text-sm text-gray-500 mb-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            HR EXCELLENCE REDEFINED
+          </motion.p>
 
-          <h1 className="text-5xl font-extrabold mb-4">
-            WELCOME TO{" "}
-            <span className="bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+          <motion.h1
+            className="text-4xl lg:text-5xl font-bold text-black"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            WELCOME TO
+            <span className="block text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
               TALENDOR
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg text-gray-600 mb-6">
+          <motion.p
+            className="text-lg text-gray-600 mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             Door to all your Talent Needs
-          </p>
+          </motion.p>
 
-          <p className="text-gray-500 mb-8">
-            At Talendor, we don’t just connect businesses with talent; we create lasting partnerships that drive growth and excellence.
-          </p>
+          <motion.p
+            className="text-gray-500 mt-6 max-w-xl mx-auto lg:mx-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            At Talendor, we don’t just connect businesses with talent; we create lasting
+            partnerships that drive growth, innovation, and excellence.
+          </motion.p>
 
-          <div className="flex gap-4">
+          <motion.div
+            className="flex justify-center lg:justify-start gap-4 mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
             <button className="px-7 py-3 bg-[#5454AB] text-white rounded-full hover:scale-105 transition">
               Explore Now
             </button>
+
             <Link href="/contact">
-              <button className="px-6 py-3 border border-[#5454AB] text-[#5454AB] rounded-full">
+              <button className="px-6 py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
                 Contact Us
               </button>
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
-        <div className="flex-1 relative flex justify-center">
+        {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
+        <div className="flex-1 relative hidden md:block">
 
-          {/* WAVES */}
-          <motion.svg
-            className="absolute top-24 left-10 w-[500px]"
-            viewBox="0 0 400 120"
-            fill="none"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
-            <path
-              d="M0 60 C100 120 300 0 400 60"
-              stroke="#E19D36"
-              strokeWidth="3"
-              opacity="0.4"
-            />
+          {/* Waves */}
+          <motion.svg className="absolute top-26 left-16 w-[500px] z-20" viewBox="0 0 400 120" fill="none"
+            animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+            <path d="M0 60 C100 120 300 0 400 60" stroke="#E19D36" strokeWidth="3" opacity="0.4" />
           </motion.svg>
 
-          {/* DOTTED CIRCLE */}
+          {/* Wave 2 */}
+          <motion.svg className="absolute top-43 left-16 w-[500px] z-20" viewBox="0 0 400 120" fill="none"
+            animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+            <path d="M0 60 C100 120 300 0 400 60" stroke="#E19D36" strokeWidth="3" opacity="0.4" />
+          </motion.svg>
+
+          {/* Circle Image */}
           <motion.div
-            className="relative w-[420px] h-[420px] rounded-full border-dotted border-[4px] border-[#96b4d5] flex items-center justify-center"
+            className="relative w-[480px] h-[480px] mx-auto rounded-full border-dotted border-4 border-[#96b4d5] flex items-center justify-center"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 1 }}
           >
-            <div className="w-[340px] h-[340px] rounded-full overflow-hidden relative">
+            <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
               <Image
                 src="/images/herosectionimg.jpg"
                 alt="Hero"
@@ -89,35 +111,27 @@ export default function HeroSection() {
                 className="object-cover"
               />
             </div>
-
-            {/* FLOATING ICONS */}
-            <motion.div
-              className="absolute top-10 left-[-10px] p-3 bg-white rounded-full shadow-lg"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <FaUsers className="text-purple-500 w-5 h-5" />
-            </motion.div>
-
-            <motion.div
-              className="absolute top-6 right-0 p-3 bg-white rounded-full shadow-lg"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity }}
-            >
-              <FaLightbulb className="text-yellow-400 w-5 h-5" />
-            </motion.div>
-
-            <motion.div
-              className="absolute bottom-10 right-10 p-3 bg-white rounded-full shadow-lg"
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-            >
-              <FaChartLine className="text-orange-500 w-5 h-5" />
-            </motion.div>
           </motion.div>
         </div>
+
+        {/* FLOATING ICONS (HIDDEN ON MOBILE) */}
+        <motion.div className="absolute top-40 left-230 p-3 bg-white rounded-full shadow-lg hidden md:block"
+          animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+          <FaUsers className="text-purple-500 w-6 h-6" />
+        </motion.div>
+
+        <motion.div className="absolute top-24 right-40 p-3 bg-white rounded-full shadow-lg hidden md:block"
+          animate={{ y: [0, 10, 0] }} transition={{ duration: 2.5, repeat: Infinity }}>
+          <FaLightbulb className="text-yellow-400 w-6 h-6" />
+        </motion.div>
+
+        <motion.div className="absolute bottom-44 right-56 p-3 bg-white rounded-full shadow-lg hidden md:block"
+          animate={{ y: [0, -15, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+          <FaChartLine className="text-orange-500 w-6 h-6" />
+        </motion.div>
       </div>
 
+      {/* Blob Animation */}
       <style jsx>{`
         .animate-blob {
           animation: blob 7s infinite;
@@ -126,10 +140,10 @@ export default function HeroSection() {
           animation-delay: 2s;
         }
         @keyframes blob {
-          0% { transform: translate(0,0) scale(1); }
-          33% { transform: translate(30px,-40px) scale(1.1); }
-          66% { transform: translate(-20px,20px) scale(0.9); }
-          100% { transform: translate(0,0) scale(1); }
+          0% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+          100% { transform: translate(0, 0) scale(1); }
         }
       `}</style>
     </section>

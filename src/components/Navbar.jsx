@@ -27,6 +27,7 @@ export default function Navbar() {
               className="relative"
               onMouseEnter={() => setActiveMega(item.key)}
               onMouseLeave={() => setActiveMega(null)}
+              
             >
               {item.slug ? (
                 <Link href={item.slug} className="hover:text-[#43438f]">

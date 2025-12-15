@@ -1,125 +1,4 @@
 
-// "use client";
-
-// import { useEffect, useRef, useState } from "react";
-// import { motion } from "framer-motion";
-// import scrollSections from "@/data/scrollsection.json";
-// import Link from "next/link";
-
-// export default function ScrollingShowcase() {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const [showPinned, setShowPinned] = useState(false);
-//   const refs = useRef([]);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           const index = Number(entry.target.dataset.index);
-
-//           if (entry.isIntersecting) {
-//             setActiveIndex(index);
-//             setShowPinned(true);
-//           }
-//           if (
-//             index === scrollSections.length - 1 &&
-//             entry.boundingClientRect.top < 0 &&
-//             !entry.isIntersecting
-//           ) {
-//             setShowPinned(false);
-//           }
-//           if (
-//             index === 0 &&
-//             entry.boundingClientRect.top > 0 &&
-//             !entry.isIntersecting
-//           ) {
-//             setShowPinned(false);
-//           }
-//         });
-//       },
-//       {
-//         threshold: 0.6, 
-//       }
-//     );
-
-//     refs.current.forEach((el) => el && observer.observe(el));
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <section className="relative bg-white">
-//       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_2fr] gap-16 px-6 md:px-12 lg:px-24 py-32">
-//         {/* LEFT — TEXT */}
-//         <motion.div
-//           className="sticky top-1/2 -translate-y-1/2 h-fit"
-//           initial={{ opacity: 0, x: -50 }}
-//           animate={showPinned ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-//           transition={{ duration: 0.6, ease: "easeOut" }}
-//         >
-//           <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
-//             Services
-//           </h1>
-//           <p className="mt-3 text-lg text-gray-500">
-//             Comprehensive for your organization
-//           </p>
-//         </motion.div>
-
-//         {/* CENTER — IMAGE  */}
-//         <motion.div
-//           className="sticky top-1/2 -translate-y-1/2 h-fit flex justify-center"
-//           initial={{ opacity: 0, scale: 0.9 }}
-//           animate={
-//             showPinned ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
-//           }
-//           transition={{ duration: 0.4 }}
-//         >
-//           <motion.img
-//             src={scrollSections[activeIndex].image}
-//             alt=""
-//             className="w-72 h-72 object-contain"
-//             key={activeIndex} 
-//             initial={{ opacity: 0 }}
-//             animate={{ opacity: 1 }}
-//             transition={{ duration: 0.3 }}
-//           />
-//         </motion.div>
-
-//         {/* RIGHT — CONTENT */}
-//         <div className="flex flex-col">
-//           {scrollSections.map((item, i) => (
-//             <div
-//               key={item.slug}
-//               ref={(el) => (refs.current[i] = el)}
-//               data-index={i}
-//               className="min-h-screen flex flex-col justify-center"
-//             >
-//               <h2 className="text-3xl font-semibold text-[#5c5cda] mb-4">
-//                 {item.title}
-//               </h2>
-
-//               <p className="text-gray-600 mb-4">{item.description}</p>
-
-//               <ul className="space-y-2">
-//                 {item.bullets.map((b, idx) => (
-//                   <li key={idx} className="flex gap-2">
-//                     <span className="text-sky-500">•</span>
-//                     {b}
-//                   </li>
-//                 ))}
-//               </ul>
-             
-//              <Link href={`/services/${item.slug}`}>
-//               <button className="mt-6 w-fit bg-[#5454AB] text-white px-6 py-2 rounded-full">
-//                 Learn more
-//               </button>
-//               </Link>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 
 
 
@@ -176,7 +55,7 @@ export default function ScrollingShowcase() {
       {/* ================= PHONE ONLY (CARDS) ================= */}
       <div className="md:hidden px-5 py-16 space-y-10">
 
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent text-center">
+        <h1 className="text-2xl font-extrabold text-black font-heading bg-clip-text  text-center">
           Services
         </h1>
 
@@ -191,7 +70,7 @@ export default function ScrollingShowcase() {
               className="w-36 h-36 mx-auto object-contain"
             />
 
-            <h2 className="text-xl font-semibold text-[#5c5cda] text-center">
+            <h2 className="text-xl  font-heading text-[#5c5cda] text-center">
               {item.title}
             </h2>
 
@@ -236,7 +115,7 @@ export default function ScrollingShowcase() {
           animate={showPinned ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+          <h1 className="text-2xl lg:text-5xl font-heading  bg-clip-text ">
             Services
           </h1>
           <p className="mt-3 text-base lg:text-lg text-gray-500">

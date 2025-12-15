@@ -36,19 +36,19 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.h1
-            className="text-4xl lg:text-5xl font-bold text-black"
+            className="text-4xl lg:text-5xl font-bold text-black font-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
             WELCOME TO
-            <span className="block text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+            <span className="block font-heading text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
               TALENDOR
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-lg text-gray-600 mt-4"
+            className="text-lg  text-gray-600 mt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -57,7 +57,7 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.p
-            className="text-gray-500 mt-6 max-w-xl mx-auto lg:mx-0"
+            className="text-gray-500 font-para mt-6 max-w-xl mx-auto lg:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -68,16 +68,16 @@ export default function HeroSection() {
 
   {/* Buttons */}
   <motion.div 
-    className="flex gap-4"
+    className="flex gap-4 mt-10"
     initial={{ opacity: 0, y: 15 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7, duration: 0.6 }}
   >
-    <button className="px-7 py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
+    <button className="px-7 font-para py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
       Explore Now
     </button>
     <Link href="/contact">
-    <button className="px-6 py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
+    <button className="px-6 font-para py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
       Contact Us
     </button>
     </Link>
@@ -86,6 +86,8 @@ export default function HeroSection() {
 
         {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
         <div className="flex-1 relative hidden md:block">
+
+
 
  {/* Mustard Wave 1 */}
 <motion.svg 
@@ -103,6 +105,7 @@ export default function HeroSection() {
       <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
     </linearGradient>
   </defs>
+
 
   <motion.path 
     d="M0 60 C100 120 300 0 400 60"

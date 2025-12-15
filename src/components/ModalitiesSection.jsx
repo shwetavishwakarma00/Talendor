@@ -54,6 +54,23 @@ export default function ModalitiesSection() {
                       className="overflow-hidden px-4 pt-3 text-sm text-slate-700"
                     >
                       {item.fullDescription}
+
+                      {/* MOBILE IMAGE (below button) */}
+                      <div className="relative mt-4 h-56 w-full overflow-hidden rounded-2xl shadow-lg md:hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          sizes="100vw"
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        <div className="absolute bottom-3 left-3 text-white">
+                          <h3 className="text-sm font-semibold">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -62,8 +79,8 @@ export default function ModalitiesSection() {
           </div>
         </div>
 
-        {/* RIGHT */}
-        <div className="mt-10 md:mt-0 md:w-1/2">
+        {/* RIGHT – DESKTOP ONLY (UNCHANGED) */}
+        <div className="hidden md:block md:w-1/2">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeItem.id}
@@ -71,13 +88,13 @@ export default function ModalitiesSection() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
-              className="relative h-80 w-full overflow-hidden rounded-3xl shadow-xl"
+              className="relative h-100 w-full overflow-hidden rounded-3xl shadow-xl mt-40 ml-10"
             >
               <Image
                 src={activeItem.image}
                 alt={activeItem.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

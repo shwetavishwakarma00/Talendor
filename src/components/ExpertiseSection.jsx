@@ -27,11 +27,11 @@ export default function ExpertiseSection() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl sm:text-3xl font-bold text-black">
+        <h2 className="text-2xl font-heading sm:text-2xl font-bold text-black">
           OUR EXPERTISE
         </h2>
 
-        <p className="text-sm sm:text-base text-gray-600 mt-2 sm:mt-3">
+        <p className="text-sm font-para sm:text-base text-gray-600 mt-2 sm:mt-3">
           Customized to your business needs
         </p>
       </motion.div>
@@ -93,7 +93,7 @@ function ExpertiseCard({ icon, title }) {
         </div>
       </div>
 
-      <p className="text-sm sm:text-base md:text-[20px] text-center font-semibold text-black leading-tight">
+      <p className="text-sm font-para sm:text-base md:text-[20px] text-center font-semibold text-black leading-tight">
         {title}
       </p>
     </motion.div>

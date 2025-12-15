@@ -87,9 +87,8 @@ export default function HeroSection() {
         {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
         <div className="flex-1 relative hidden md:block">
 
-<<<<<<< HEAD
-          
-=======
+
+
  {/* Mustard Wave 1 */}
 <motion.svg 
   className="absolute top-30 left-20 w-[500px] z-20"
@@ -106,7 +105,7 @@ export default function HeroSection() {
       <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
     </linearGradient>
   </defs>
->>>>>>> 71ad40abc1859fb372d50bc9770ba608de3a5511
+
 
   <motion.path 
     d="M0 60 C100 120 300 0 400 60"

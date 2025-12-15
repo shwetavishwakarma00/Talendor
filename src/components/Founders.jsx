@@ -40,7 +40,7 @@ const Founders = () => {
         <div className="flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-4xl">
 
           {/* Image */}
-          <div className="w-full md:w-1/3 h-60 md:h-auto">
+          <div className="w-full md:w-1/3 h-100 md:h-60 md:h-auto">
             <img
               src={founders.founders[index].image}
               alt={founders.founders[index].name}

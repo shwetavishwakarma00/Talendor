@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -13,24 +12,28 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
       <div className="container mx-auto px-6 md:px-40 h-20 flex items-center justify-between">
-
         {/* Logo */}
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={130} height={50} priority />
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={130}
+            height={50}
+            priority
+          />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-10 font-medium">
+        <div className="hidden md:flex items-center gap-10 font-medium cursor-pointer ">
           {navigation.navItems.map((item) => (
             <div
               key={item.key}
               className="relative"
               onMouseEnter={() => setActiveMega(item.key)}
               onMouseLeave={() => setActiveMega(null)}
-              
             >
               {item.slug ? (
-                <Link href={item.slug} className=" hover:text-[#43438f]">
+                <Link href={item.slug} className=" cursor-pointer hover:text-[#43438f]">
                   {item.label}
                 </Link>
               ) : (
@@ -40,12 +43,12 @@ export default function Navbar() {
                 </button>
               )}
 
-              {/* ================= MEGA DROPDOWN ================= */}
+              {/* MEGA DROPDOWN */}
               {item.columns && activeMega === item.key && (
-                <div className="fixed left-0 top-20 w-full bg-white shadow-xl border-t">
+                <div className="absolute left-1/2 top-full w-screen -translate-x-1/2 bg-white shadow-xl border-t">
                   <div className="container mx-auto px-6 md:px-40 py-10">
                     <div
-                      className={`grid gap-8`}
+                      className="grid gap-8"
                       style={{
                         gridTemplateColumns: `repeat(${item.columns.length}, minmax(0, 1fr))`,
                       }}
@@ -73,7 +76,6 @@ export default function Navbar() {
                   </div>
                 </div>
               )}
-              {/* ================================================== */}
             </div>
           ))}
         </div>

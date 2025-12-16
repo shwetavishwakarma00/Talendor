@@ -76,11 +76,7 @@ export default function HeroSection() {
     <button className="px-7 font-para py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
       Explore Now
     </button>
-    <Link href="/contact">
-    <button className="px-6 font-para py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
-      Contact Us
-    </button>
-    </Link>
+   
   </motion.div>
 </motion.div>
 

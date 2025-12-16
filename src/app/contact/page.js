@@ -1,44 +1,155 @@
+// export default function ContactUs() {
+//   return (
+//     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
+//       <div className="max-w-xl w-full bg-white shadow-lg rounded-2xl p-8">
+//         <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>
+
+//         <form className="space-y-4">
+//           <div>
+//             <label className="block mb-1 font-medium">Name</label>
+//             <input
+//               type="text"
+//               className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+//               placeholder="Enter your name"
+//             />
+//           </div>
+
+//           <div>
+//             <label className="block mb-1 font-medium">Email</label>
+//             <input
+//               type="email"
+//               className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+//               placeholder="Enter your email"
+//             />
+//           </div>
+
+//           <div>
+//             <label className="block mb-1 font-medium">Message</label>
+//             <textarea
+//               rows="4"
+//               className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+//               placeholder="Write your message"
+//             ></textarea>
+//           </div>
+
+//           <button
+//             type="submit"
+//             className="w-full bg-[#5454AB] text-white py-3 rounded-xl font-semibold hover:bg-[#43438f] transition"
+//           >
+//             Send Message
+//           </button>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+"use client";
+
+import { FiInstagram } from "react-icons/fi";
+import { FaTwitter, FaLinkedin } from "react-icons/fa";
+
 export default function ContactUs() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
-      <div className="max-w-xl w-full bg-white shadow-lg rounded-2xl p-8">
-        <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>
+    <div className="min-h-screen flex items-center justify-center bg-white px-4 py-8 md:py-12 lg:py-16">
+      <div className="w-full max-w-6xl bg-[#fcfcfc] rounded-3xl text-black flex flex-col md:flex-row md:items-stretch gap-8 md:gap-0">
 
-        <form className="space-y-4">
+        {/* Left side content */}
+        <div className="w-full md:w-1/2 px-4 sm:px-8 py-15 md:py-12 flex flex-col justify-between">
           <div>
-            <label className="block mb-1 font-medium">Name</label>
-            <input
-              type="text"
-              className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your name"
-            />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+              Let’s talk
+              <br />
+              on something{" "}
+              <span className="bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+                great
+              </span>
+              <br />
+              together
+            </h1>
+
+            {/* Contact info */}
+            <div className="mt-8 space-y-4 text-sm sm:text-base">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#5454AB]">
+                  ✉️
+                </span>
+                <span className="break-all">Talendor@gmail.com</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#5454AB]">
+                  📞
+                </span>
+                <span>+91 123 456 789</span>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <label className="block mb-1 font-medium">Email</label>
-            <input
-              type="email"
-              className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
-            />
+          {/* Social icons */}
+          <div className="mt-8 sm:mt-10 flex items-center gap-4">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-md text-[#5454AB] border border-[#5454AB] flex items-center justify-center hover:bg-[#5454AB] hover:text-white transition">
+              <FiInstagram />
+            </div>
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-md text-[#5454AB] border border-[#5454AB] flex items-center justify-center hover:bg-[#5454AB] hover:text-white transition">
+              <FaTwitter />
+            </div>
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-md text-[#5454AB] border border-[#5454AB] flex items-center justify-center hover:bg-[#5454AB] hover:text-white transition">
+              <FaLinkedin />
+            </div>
           </div>
+        </div>
 
-          <div>
-            <label className="block mb-1 font-medium">Message</label>
-            <textarea
-              rows="4"
-              className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Write your message"
-            ></textarea>
-          </div>
+        {/* Right side form */}
+        <div className="w-full md:w-1/2 bg-white text-gray-900 rounded-3xl md:rounded-l-none p-6 sm:p-8 lg:p-10 shadow-xl">
+          <form className="space-y-4">
 
-          <button
-            type="submit"
-            className="w-full bg-[#5454AB] text-white py-3 rounded-xl font-semibold hover:bg-[#43438f] transition"
-          >
-            Send Message
-          </button>
-        </form>
+            <div>
+              <label className="block mb-1 text-xs sm:text-sm font-medium text-gray-600">
+                Your name
+              </label>
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full border-b border-gray-300 pb-2 focus:outline-none focus:border-[#5454AB] text-sm sm:text-base"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-xs sm:text-sm font-medium text-gray-600">
+                Your email
+              </label>
+              <input
+                type="email"
+                placeholder="email@gmail.com"
+                className="w-full border-b border-gray-300 pb-2 focus:outline-none focus:border-[#5454AB] text-sm sm:text-base"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-xs sm:text-sm font-medium text-gray-600">
+                Your message
+              </label>
+              <textarea
+                rows={4}
+                placeholder="Write your message"
+                className="w-full border border-gray-200 rounded-2xl p-3 focus:outline-none focus:ring-2 focus:ring-[#5454AB] text-sm sm:text-base"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-[#5454AB] text-white py-3 rounded-2xl font-semibold
+              border border-[#5454AB]
+              hover:bg-purple-50 hover:text-black
+              transition text-sm sm:text-base"
+            >
+              Send message
+            </button>
+
+          </form>
+        </div>
       </div>
     </div>
   );

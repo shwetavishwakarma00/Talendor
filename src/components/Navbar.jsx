@@ -80,7 +80,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <Link href="/contact" className="hidden md:block">
-          <button className="px-5 py-2 rounded-full bg-[#43438f] text-white">
+          <button className="px-6 font-para py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
             Contact Us
           </button>
         </Link>
@@ -131,7 +131,7 @@ export default function Navbar() {
           ))}
 
           <Link href="/contact" onClick={() => setMobileOpen(false)}>
-            <button className="w-full py-2 rounded-full bg-[#43438f] text-white">
+            <button className="px-6 font-para py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
               Contact Us
             </button>
           </Link>

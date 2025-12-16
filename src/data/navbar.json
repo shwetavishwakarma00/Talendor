@@ -2,8 +2,7 @@
   "navItems": [
     {
       "label": "Home",
-      "key": "home",
-      "slug":"/"
+      "key": "home"
     },
     {
       "label": "About Us",

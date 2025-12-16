@@ -35,28 +35,58 @@ export default function DeliveryFormatSection() {
         </p>
       </motion.div>
 
-      {/* Animated connecting line */}
+      {/* CONNECTING LINES */}
       <div className="relative container mx-auto px-4 sm:px-6 mt-14">
+        {/* Desktop horizontal line */}
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: "80%" }}
           transition={{ duration: 1.4, ease: "easeInOut" }}
           viewport={{ once: true }}
           className="
+            hidden sm:block
             absolute 
             left-1/2 
             -translate-x-1/2
             h-[3px] 
             bg-[#5454AB]/80 
             rounded-full
-            top-[42px] sm:top-[52px]
+            top-[52px]
             z-0
           "
-        ></motion.div>
+        />
+
+        
+        
+
       </div>
 
       {/* Cards */}
-      <div className="container mx-auto px-4 sm:px-6 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-10 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 relative z-10">
+        {/* Mobile vertical line (center of circles) */}
+        {/* Mobile vertical line (centered, shortened, no text overlap) */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
+  className="
+    sm:hidden
+    absolute
+    left-1/2
+    -translate-x-1/2
+    top-[40px]        /* center of first circle */
+    bottom-[96px]    /* center of last circle */
+    w-[3px]
+    bg-[#5454AB]/70
+    rounded-full
+    -z-10
+    pointer-events-none
+  "
+/>
+
+
+
         <DeliveryCard
           icon={<FiBookOpen className="text-[#5454AB] text-3xl sm:text-4xl" />}
           title="Training"
@@ -94,7 +124,7 @@ function DeliveryCard({ icon, title, delay }) {
       className="flex flex-col items-center gap-3"
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: delay, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.08 }}
     >

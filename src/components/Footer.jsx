@@ -1,82 +1,123 @@
 "use client";
+
+import Link from "next/link";
 import { FiInstagram } from "react-icons/fi";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TiPhone } from "react-icons/ti";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="w-full h-auto bg-[#222244] text-white py-12">
+    <footer className="w-full bg-black text-gray-300 px-6 md:px-16 lg:px-24 xl:px-32 pt-10">
       
-      {/* TOP GRID */}
-      <div className="max-w-7xl mx-auto 
-        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
-        gap-10 md:gap-50 
-        px-6 md:px-12 ml-2 text-center md:text-left"
-      >
+      {/* TOP SECTION */}
+      <div className="flex flex-col md:flex-row justify-between gap-12 border-b border-gray-700 pb-8">
         
-        {/* LEFT */}
-        <div>
-          <h2 className="text-3xl font-bold mb-3">Talendor</h2>
-          <p className="text-sm leading-relaxed text-gray-300">
-            Door to all your Talend needs.
+        {/* LEFT: BRAND + DESCRIPTION */}
+        <div className="max-w-md">
+          <h2 className="text-2xl font-semibold text-white tracking-wide">
+            TALENDOR
+          </h2>
+
+          <p className="mt-3 text-sm text-gray-400">
+            Door to all your Talent Needs
           </p>
 
-          <p className="text-sm leading-relaxed text-gray-300 mt-2">
-            Transforming HR solutions into strategic business advantages through
-            innovation, expertise, and partnership.
+          <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+            Transforming HR solutions into strategic business advantages
+            through innovation, expertise, and partnership.
           </p>
+
+          {/* SOCIAL ICONS */}
+          <div className="flex items-center gap-4 mt-6 text-lg">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="hover:text-orange-400 transition"
+            >
+              <FiInstagram />
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="hover:text-orange-400 transition"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              className="hover:text-orange-400 transition"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
 
-        {/* QUICK LINKS */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-gray-300 text-sm">
-            <li><a className="hover:text-white transition">Our Expertise</a></li>
-            <li><a className="hover:text-white transition">Services & Products</a></li>
-            <li><a className="hover:text-white transition">Why Choose Us</a></li>
-            <li><a className="hover:text-white transition">Our Founders</a></li>
-          </ul>
-        </div>
+        {/* RIGHT: LINKS + CONTACT */}
+        <div className="flex flex-1 flex-col sm:flex-row md:justify-end gap-20">
+          
+          {/* QUICK LINKS */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">
+              Quick Links
+            </h3>
+            <ul className="space-y-2 text-sm">
+              {[
+                "Our Expertise",
+                "Services & Products",
+                "Why Choose Us",
+                "Our Founders",
+              ].map((item) => (
+                <li key={item}>
+                  <Link
+                    href="#"
+                    className="hover:text-orange-400 transition"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* CONTACT */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
-          <ul className="space-y-2 text-gray-300 text-sm">
-            <li className="flex justify-center md:justify-start items-center gap-2">
-              <MdEmail /> info@talendor.com
-            </li>
-            <li className="flex justify-center md:justify-start items-center gap-2">
-              <TiPhone /> +1 (555) 123-4567
-            </li>
-          </ul>
+          {/* CONTACT */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">
+              Contact Us
+            </h3>
+            <div className="space-y-3 text-sm text-gray-400">
+              <p className="flex items-center gap-2">
+                <MdEmail className="text-orange-400" />
+                info@talendor.com
+              </p>
+              <p className="flex items-center gap-2">
+                <TiPhone className="text-orange-400" />
+                +1 (555) 123-4567
+              </p>
+            </div>
+          </div>
         </div>
-
       </div>
 
-      {/* BOTTOM */}
-      <div className="border-t border-[#FC9236]/60 mt-12 pt-6 
-        flex flex-col md:flex-row justify-between items-center 
-        text-gray-300 text-sm px-4 md:px-8 gap-4 md:gap-0"
-      >
-        <p className="text-center md:text-left">
-          @ 2025 TALENDOR. ALL RIGHTS RESERVED
+      {/* BOTTOM BAR */}
+      <div className="flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 py-5">
+        <p>
+          © 2025 TALENDOR. All rights reserved.
         </p>
 
-        {/* SOCIAL ICONS */}
-        <div className="flex space-x-5 text-xl">
-          <a className="hover:text-white transition bg-gray-400/20 backdrop-blur-md p-3 rounded-full">
-            <FiInstagram />
-          </a>
-          <a className="hover:text-white transition bg-gray-400/20 backdrop-blur-md p-3 rounded-full">
-            <FaTwitter />
-          </a>
-          <a className="hover:text-white transition bg-gray-400/20 backdrop-blur-md p-3 rounded-full">
-            <FaLinkedin />
-          </a>
-        </div>
+        {/* BACK TO TOP */}
+        <button
+          onClick={scrollToTop}
+          className="mt-3 md:mt-0 border border-gray-600 px-4 py-2 rounded-md uppercase tracking-wide hover:border-orange-400 hover:text-orange-400 transition"
+        >
+          ↑ Back to top
+        </button>
       </div>
-
     </footer>
   );
 }

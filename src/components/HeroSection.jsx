@@ -13,18 +13,19 @@ export default function HeroSection() {
   const product = productsData.products[0];
   const slug = product.slug;
   return (
-    <section className="w-full min-h-[700px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="w-full min-h-[600px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
 
       {/* Background Blobs (ALL DEVICES) */}
       <motion.div className="absolute -top-10 -right-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
       <motion.div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob animation-delay-2000" />
       <motion.div className="absolute top-10 -left-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
 
-      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10 min-h-[600px]">
+
 
         {/* TEXT SECTION */}
         <motion.div
-          className="flex-1 text-center lg:text-left"
+          className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left min-h-[500px]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
@@ -69,121 +70,113 @@ export default function HeroSection() {
             partnerships that drive growth, innovation, and excellence.
           </motion.p>
 
-  {/* Buttons */}
-  <Link href={`/products/${slug}`}>
-  <motion.div 
-    className="flex gap-4 mt-10"
-    initial={{ opacity: 0, y: 15 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.7, duration: 0.6 }}
-  >
-    
-    <button className="px-7 font-para py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
-      Explore Now
-    </button>
-   
-  </motion.div>
-  </Link>
-</motion.div>
+          {/* Buttons */}
+          <motion.div
+            className="mt-10 flex justify-center lg:justify-start"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+          >
+            <Link href={`/products/${slug}`}>
+              <button className="px-7 py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
+                Explore Now
+              </button>
+            </Link>
+          </motion.div>
+
+        </motion.div>
 
         {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
         <div className="flex-1 relative hidden md:block">
+          {/* Mustard Wave 1 */}
+          <motion.svg
+            className="absolute top-30 left-20 w-[500px] z-20"
+            viewBox="0 0 400 120"
+            fill="none"
+            initial={{ opacity: 0 }}
+            animate={{ y: [0, -10, 0], opacity: [0.8, 1, 0.8] }}
+            transition={{ duration: 4, repeat: Infinity, repeatType: "mirror" }}
+          >
+            <defs>
+              <linearGradient id="waveGrad1" x1="0%" x2="100%">
+                <stop offset="0%" stopColor="#E19D36" stopOpacity="0.1" />
+                <stop offset="50%" stopColor="#E19D36" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
+              </linearGradient>
+            </defs>
 
 
+            <motion.path
+              d="M0 60 C100 120 300 0 400 60"
+              stroke="url(#waveGrad1)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{
+                duration: 1.2,
+                delay: 1,   // ⬅ starts after the image
+                ease: "easeInOut"
 
- {/* Mustard Wave 1 */}
-<motion.svg 
-  className="absolute top-30 left-20 w-[500px] z-20"
-  viewBox="0 0 400 120" 
-  fill="none"
-  initial={{ opacity: 0 }}
-  animate={{ y: [0, -10, 0], opacity: [0.8, 1, 0.8] }}
-  transition={{ duration: 4, repeat: Infinity, repeatType: "mirror" }}
->
-  <defs>
-    <linearGradient id="waveGrad1" x1="0%" x2="100%">
-      <stop offset="0%" stopColor="#E19D36" stopOpacity="0.1" />
-      <stop offset="50%" stopColor="#E19D36" stopOpacity="0.4" />
-      <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
-    </linearGradient>
-  </defs>
+              }}
+            />
+          </motion.svg>
 
 
-  <motion.path 
-    d="M0 60 C100 120 300 0 400 60"
-    stroke="url(#waveGrad1)" 
-    strokeWidth="3"
-    strokeLinecap="round"
-    initial={{ pathLength: 0 }}
-    animate={{ pathLength: 1 }}
-    transition={{
-      duration: 1.2,
-      delay: 1,   // ⬅ starts after the image
-      ease: "easeInOut"
-      
-  }}
-  />
-</motion.svg>
+          {/* Mustard Wave 2 */}
+          <motion.svg
+            className="absolute top-50 left-15 w-[550px] z-20"
+            viewBox="0 0 450 120"
+            fill="none"
+            initial={{ opacity: 0 }}
+            animate={{ y: [0, 8, 0], opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
+          >
+            <defs>
+              <linearGradient id="waveGrad2" x1="0%" x2="100%">
+                <stop offset="0%" stopColor="#E19D36" stopOpacity="0.1" />
+                <stop offset="50%" stopColor="#E19D36" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
+              </linearGradient>
+            </defs>
 
+            <motion.path
+              d="M0 50 C150 110 300 -10 450 50"
+              stroke="url(#waveGrad2)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{
+                duration: 1.2,
+                delay: 1.2,
+                ease: "easeInOut"
 
-{/* Mustard Wave 2 */}
-<motion.svg 
-  className="absolute top-50 left-15 w-[550px] z-20"
-  viewBox="0 0 450 120" 
-  fill="none"
-   initial={{ opacity: 0 }}
-  animate={{ y: [0, 8, 0], opacity: [0.7, 1, 0.7] }}
-  transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
->
-  <defs>
-    <linearGradient id="waveGrad2" x1="0%" x2="100%">
-      <stop offset="0%" stopColor="#E19D36" stopOpacity="0.1" />
-      <stop offset="50%" stopColor="#E19D36" stopOpacity="0.5" />
-      <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
-    </linearGradient>
-  </defs>
+              }}
+            />
+          </motion.svg>
+          {/* Outer Dotted Border Circle */}
+          <motion.div
+            className="relative w-[480px] h-[480px] mx-auto rounded-full border-dotted border-[4px] border-[#96b4d5] flex items-center justify-center z-10"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+          >
 
-  <motion.path 
-    d="M0 50 C150 110 300 -10 450 50"
-    stroke="url(#waveGrad2)" 
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    initial={{ pathLength: 0 }}
-    animate={{ pathLength: 1 }}
-    transition={{
-      duration: 1.2,
-      delay: 1.2,  
-      ease: "easeInOut"
-      
-  }}
-  />
-</motion.svg>
+            {/* Inner Circle to create GAP */}
+            <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
 
+              <Image
+                src="/images/herosectionimg.jpg"
+                alt="Team Collaboration"
+                fill
+                className="object-cover"
+              />
+            </div>
 
+          </motion.div>
 
-
-  {/* Outer Dotted Border Circle */}
-  <motion.div 
-    className="relative w-[480px] h-[480px] mx-auto rounded-full border-dotted border-[4px] border-[#96b4d5] flex items-center justify-center z-10"
-    initial={{ scale: 0 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 1 }}
-  >
-
-    {/* Inner Circle to create GAP */}
-    <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
-
-      <Image 
-        src="/images/herosectionimg.jpg"
-        alt="Team Collaboration"
-        fill
-        className="object-cover"
-      />
-    </div>
-
-  </motion.div>
-
-</div>
+        </div>
 
         {/* FLOATING ICONS (HIDDEN ON MOBILE) */}
         <motion.div className="absolute top-40 left-230 p-3 bg-white rounded-full shadow-lg hidden md:block"

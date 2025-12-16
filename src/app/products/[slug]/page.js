@@ -32,53 +32,27 @@ export default function ProductPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-500 to-orange-400 text-white">
-        <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+      {/* Simple Hero Section with Animations */}
+<section className="relative bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20 my-5 px-6">
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="max-w-3xl mx-auto text-center"
+  >
+    <p className="text-xs uppercase tracking-widest mb-2 text-purple-100">
+      {product.hero.badge}
+    </p>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+      {product.hero.title}
+    </h1>
+    <p className="text-lg text-purple-100/80 mb-6">
+      {product.hero.description}
+    </p>
+    
+  </motion.div>
+</section>
 
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-20 md:flex-row md:justify-between">
-          <motion.div
-            className="max-w-xl"
-            initial="hidden"
-            animate="visible"
-            custom={0}
-            variants={fadeUp}
-          >
-            <p className="text-xs uppercase tracking-[0.25em] text-purple-100">
-              {product.hero.badge}
-            </p>
-
-            <h1 className="mt-3 text-3xl font-bold md:text-4xl">
-              {product.hero.title}
-            </h1>
-
-            <p className="mt-4 text-sm md:text-base text-purple-100/80">
-              {product.hero.description}
-            </p>
-
-            <div className="mt-6 flex gap-3">
-              <button className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-purple-700">
-                {product.hero.primaryCta}
-              </button>
-              <button className="rounded-full border border-white/40 px-6 py-2 text-sm font-semibold">
-                {product.hero.secondaryCta}
-              </button>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="relative h-60 w-60 md:h-72 md:w-72"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-          >
-            <Image
-              src={product.hero.image.src}
-              alt={product.hero.image.alt}
-              fill
-              className="object-contain"
-            />
-          </motion.div>
-        </div>
-      </section>
 
       {/* Four colour model */}
       <section className="mx-auto max-w-6xl px-6 py-16">
@@ -184,7 +158,7 @@ export default function ProductPage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="rounded-3xl bg-gradient-to-r from-purple-600 to-orange-400 text-center text-white p-10">
+        <div className="rounded-3xl bg-gradient-to-r from-purple-600 to-indigo-700 text-center text-white p-10">
           <h2 className="text-2xl font-semibold">
             {product.cta.title}
           </h2>

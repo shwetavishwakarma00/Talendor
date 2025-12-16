@@ -6,8 +6,7 @@
         "badge": "Our flagship product",
         "title": "Insights Discovery: four colours, powerful self-awareness",
         "description": "A simple four-colour model that helps people understand themselves, appreciate others, and unlock better collaboration at work.",
-        "primaryCta": "Explore programmes",
-        "secondaryCta": "Talk to an expert",
+        
         "image": {
           "src": "/images/talendorp1.png",
           "alt": "Insights Discovery four-colour wheel"

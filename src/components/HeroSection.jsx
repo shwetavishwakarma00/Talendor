@@ -1,8 +1,11 @@
+
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+
+
 import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 export default function HeroSection() {
@@ -33,19 +36,19 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.h1
-            className="text-4xl lg:text-5xl font-bold text-black"
+            className="text-4xl lg:text-5xl font-bold text-black font-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
             WELCOME TO
-            <span className="block text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+            <span className="block font-heading text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
               TALENDOR
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-lg text-gray-600 mt-4"
+            className="text-lg  text-gray-600 mt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -54,7 +57,7 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.p
-            className="text-gray-500 mt-6 max-w-xl mx-auto lg:mx-0"
+            className="text-gray-500 font-para mt-6 max-w-xl mx-auto lg:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -63,56 +66,122 @@ export default function HeroSection() {
             partnerships that drive growth, innovation, and excellence.
           </motion.p>
 
-          <motion.div
-            className="flex justify-center lg:justify-start gap-4 mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <button className="px-7 py-3 bg-[#5454AB] text-white rounded-full hover:scale-105 transition">
-              Explore Now
-            </button>
-
-            <Link href="/contact">
-              <button className="px-6 py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
-                Contact Us
-              </button>
-            </Link>
-          </motion.div>
-        </motion.div>
+  {/* Buttons */}
+  <motion.div 
+    className="flex gap-4 mt-10"
+    initial={{ opacity: 0, y: 15 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.7, duration: 0.6 }}
+  >
+    <button className="px-7 font-para py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
+      Explore Now
+    </button>
+    <Link href="/contact">
+    <button className="px-6 font-para py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
+      Contact Us
+    </button>
+    </Link>
+  </motion.div>
+</motion.div>
 
         {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
         <div className="flex-1 relative hidden md:block">
 
-          {/* Waves */}
-          <motion.svg className="absolute top-26 left-16 w-[500px] z-20" viewBox="0 0 400 120" fill="none"
-            animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
-            <path d="M0 60 C100 120 300 0 400 60" stroke="#E19D36" strokeWidth="3" opacity="0.4" />
-          </motion.svg>
 
-          {/* Wave 2 */}
-          <motion.svg className="absolute top-43 left-16 w-[500px] z-20" viewBox="0 0 400 120" fill="none"
-            animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
-            <path d="M0 60 C100 120 300 0 400 60" stroke="#E19D36" strokeWidth="3" opacity="0.4" />
-          </motion.svg>
 
-          {/* Circle Image */}
-          <motion.div
-            className="relative w-[480px] h-[480px] mx-auto rounded-full border-dotted border-4 border-[#96b4d5] flex items-center justify-center"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
-              <Image
-                src="/images/herosectionimg.jpg"
-                alt="Hero"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
-        </div>
+ {/* Mustard Wave 1 */}
+<motion.svg 
+  className="absolute top-30 left-20 w-[500px] z-20"
+  viewBox="0 0 400 120" 
+  fill="none"
+  initial={{ opacity: 0 }}
+  animate={{ y: [0, -10, 0], opacity: [0.8, 1, 0.8] }}
+  transition={{ duration: 4, repeat: Infinity, repeatType: "mirror" }}
+>
+  <defs>
+    <linearGradient id="waveGrad1" x1="0%" x2="100%">
+      <stop offset="0%" stopColor="#E19D36" stopOpacity="0.1" />
+      <stop offset="50%" stopColor="#E19D36" stopOpacity="0.4" />
+      <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
+    </linearGradient>
+  </defs>
+
+
+  <motion.path 
+    d="M0 60 C100 120 300 0 400 60"
+    stroke="url(#waveGrad1)" 
+    strokeWidth="3"
+    strokeLinecap="round"
+    initial={{ pathLength: 0 }}
+    animate={{ pathLength: 1 }}
+    transition={{
+      duration: 1.2,
+      delay: 1,   // ⬅ starts after the image
+      ease: "easeInOut"
+      
+  }}
+  />
+</motion.svg>
+
+
+{/* Mustard Wave 2 */}
+<motion.svg 
+  className="absolute top-50 left-15 w-[550px] z-20"
+  viewBox="0 0 450 120" 
+  fill="none"
+   initial={{ opacity: 0 }}
+  animate={{ y: [0, 8, 0], opacity: [0.7, 1, 0.7] }}
+  transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
+>
+  <defs>
+    <linearGradient id="waveGrad2" x1="0%" x2="100%">
+      <stop offset="0%" stopColor="#E19D36" stopOpacity="0.1" />
+      <stop offset="50%" stopColor="#E19D36" stopOpacity="0.5" />
+      <stop offset="100%" stopColor="#E19D36" stopOpacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <motion.path 
+    d="M0 50 C150 110 300 -10 450 50"
+    stroke="url(#waveGrad2)" 
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    initial={{ pathLength: 0 }}
+    animate={{ pathLength: 1 }}
+    transition={{
+      duration: 1.2,
+      delay: 1.2,  
+      ease: "easeInOut"
+      
+  }}
+  />
+</motion.svg>
+
+
+
+
+  {/* Outer Dotted Border Circle */}
+  <motion.div 
+    className="relative w-[480px] h-[480px] mx-auto rounded-full border-dotted border-[4px] border-[#96b4d5] flex items-center justify-center z-10"
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1 }}
+  >
+
+    {/* Inner Circle to create GAP */}
+    <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
+
+      <Image 
+        src="/images/herosectionimg.jpg"
+        alt="Team Collaboration"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+  </motion.div>
+
+</div>
 
         {/* FLOATING ICONS (HIDDEN ON MOBILE) */}
         <motion.div className="absolute top-40 left-230 p-3 bg-white rounded-full shadow-lg hidden md:block"

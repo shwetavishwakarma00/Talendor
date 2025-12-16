@@ -4,11 +4,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import productsData from "@/data/products.json";
 
 
 import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 export default function HeroSection() {
+  const product = productsData.products[0];
+  const slug = product.slug;
   return (
     <section className="w-full min-h-[700px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
 
@@ -67,17 +70,20 @@ export default function HeroSection() {
           </motion.p>
 
   {/* Buttons */}
+  <Link href={`/products/${slug}`}>
   <motion.div 
     className="flex gap-4 mt-10"
     initial={{ opacity: 0, y: 15 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7, duration: 0.6 }}
   >
+    
     <button className="px-7 font-para py-3 bg-[#5454AB] text-white rounded-full font-medium hover:bg-[#43438f] hover:scale-105 transition">
       Explore Now
     </button>
    
   </motion.div>
+  </Link>
 </motion.div>
 
         {/* IMAGE SECTION (HIDDEN ON MOBILE) */}

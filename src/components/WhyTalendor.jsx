@@ -6,149 +6,36 @@ export default function WhyTalendor() {
   return (
     <section
       className="
-        relative w-full min-h-screen py-20 px-4 md:px-6 
+        relative w-full min-h-[700px] md:h-[700px]
+        py-20 px-4 md:px-6
         bg-[#111122] overflow-hidden
       "
     >
       {/* VISIBLE GRADIENT */}
       <div
         className="
-          absolute bottom-0 right-0 w-[350px] h-[350px] md:w-[550px] md:h-[550px]
-          rounded-full opacity-70 bg-gradient-to-br 
+          absolute bottom-0 right-0
+          w-[350px] h-[350px] md:w-[550px] md:h-[550px]
+          rounded-full opacity-70 bg-gradient-to-br
           from-[#6A6AFF]/50 via-[#867AE6]/40 to-[#B0A7FF]/35
           blur-[100px] md:blur-[130px]
         "
-      ></div>
+      />
 
-      {/* CIRCLES + CARDS (NOW RESPONSIVE) */}
+      {/* MOBILE ORDER WRAPPER */}
+      <div className="flex flex-col md:block">
+
+     {/* LEFT CONTENT (MOVES BELOW CIRCLES ON MOBILE) */}
       <div className="
-        absolute md:right-25 right-1/2 translate-x-1/2 md:translate-x-0
-        top-[54%] md:top-1/2 -translate-y-1/2 
-        w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px]
-        flex items-center justify-center
-        mt-10 md:mt-15
-      ">
-
-        {/* OUTER CIRCLE */}
-        <motion.div
-          className="
-            w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] 
-            md:w-[450px] md:h-[450px]
-            rounded-full border border-[#2039b8]/90 
-            flex items-center justify-center relative
-          "
-          initial={{ scale: 0.7, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          {/* TOP FLOATING CARD */}
-          <motion.div
-            className="
-              absolute top-[-15px] sm:top-[-25px] 
-              left-1/2 -translate-x-1/2 
-              px-3 py-1 sm:px-4 sm:py-2 rounded-full 
-              backdrop-blur-xl bg-white/10 border border-white/20 
-              text-white text-xs sm:text-[14px]
-            "
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 2.6, repeat: Infinity }}
-          >
-            Culture
-          </motion.div>
-
-          {/* MIDDLE CIRCLE */}
-          <motion.div
-            className="
-              w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] 
-              md:w-[360px] md:h-[360px]
-              rounded-full border border-[#5454AB] 
-              flex items-center justify-center relative
-            "
-            initial={{ scale: 0.7, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.1, delay: 0.2 }}
-          >
-            {/* LEFT FLOAT CARD */}
-            <motion.div
-              className="
-                absolute left-[-35px] sm:left-[-50px] 
-                top-1/2 -translate-y-1/2 
-                px-3 py-1 rounded-full 
-                backdrop-blur-xl bg-white/10 border border-white/20 
-                text-white text-xs sm:text-sm
-              "
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2.6, repeat: Infinity }}
-            >
-              HR Strategy
-            </motion.div>
-
-            {/* RIGHT FLOAT CARD */}
-            <motion.div
-              className="
-                absolute right-[-35px] sm:right-[-50px] 
-                top-1/2 -translate-y-1/2 
-                px-3 py-1 rounded-full 
-                backdrop-blur-xl bg-white/10 border border-white/20 
-                text-white text-xs sm:text-sm
-              "
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2.6, repeat: Infinity }}
-            >
-              Talent Dev
-            </motion.div>
-
-            {/* INNER CIRCLE */}
-            <motion.div
-              className="
-                w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] 
-                md:w-[280px] md:h-[280px]
-                rounded-full border border-[#FF7A00] 
-                flex items-center justify-center
-              "
-              initial={{ scale: 0.7, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2, delay: 0.3 }}
-            >
-              <div className="flex flex-col items-center text-white">
-                <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">20+</h1>
-                <p className="text-xs sm:text-sm text-gray-400 opacity-80 -mt-1 text-center">
-                  Years of Global Experience
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* BOTTOM FLOAT CARD */}
-          <motion.div
-            className="
-              absolute bottom-[-20px] sm:bottom-[-30px] 
-              left-1/2 -translate-x-1/2 
-              px-3 py-1 sm:px-4 sm:py-2 rounded-full 
-              backdrop-blur-xl bg-white/10 border border-white/20 
-              text-white text-xs sm:text-sm
-            "
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 2.6, repeat: Infinity }}
-          >
-            Global Experience
-          </motion.div>
-
-        </motion.div>
-      </div>
-
-      {/* LEFT CONTENT (MOVES BELOW CIRCLES ON MOBILE) */}
-      <div className="
-        relative z-10 max-w-4xl text-white 
-        mt-[420px] sm:mt-[480px] md:mt-0 
-        md:ml-6 text-center md:text-left px-4
-      ">
+        relative mt-15 md:mt-0 z-10 max-w-4xl text-white
+          md:ml-6 text-center md:text-left px-4
+        ">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl font-bold mb-6"
+         className="text-3xl sm:text-4xl font-bold mb-6 md:mt-2"
+
         >
           Why Talendor?
         </motion.h2>
@@ -157,13 +44,17 @@ export default function WhyTalendor() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-12 mx-auto md:mx-0"
+           className="
+            text-gray-300 text-base sm:text-lg
+            leading-relaxed max-w-2xl
+            mb-12 mx-auto md:mx-0
+          "
         >
-          Talendor stands for meaningful leadership, organizational excellence,
-          and people-first transformation.
+          Your people are your greates asset.At Talendor, we blend innovation with human-centric
+          solution to create workplace thrive.Partners with us 
+          to unlock your organization's full potential.
         </motion.p>
 
-        {/* GLASS CARD */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -178,8 +69,8 @@ export default function WhyTalendor() {
         >
           <h3 className="text-lg font-semibold mb-3">Client Impact Analysis</h3>
 
-          {/* GRAPH */}
-          <div className="w-full h-[220px] sm:h-[260px] overflow-hidden">
+              {/* GRAPH */}
+          <div className=" w-full h-[220px] sm:h-[260px] overflow-hidden">
             <svg
               width="100%"
               height="100%"
@@ -259,6 +150,148 @@ export default function WhyTalendor() {
             </svg>
           </div>
         </motion.div>
+      </div>
+         
+       
+        {/* CIRCLES (SECOND ON MOBILE, SAME DESKTOP POSITION) */}
+        <div
+          className="
+            order-2 md:order-none
+            relative z-0 mt-16 md:mt-0
+            md:absolute md:right-25 md:top-1/2 md:-translate-y-1/2
+            flex items-center justify-center
+          "
+        >
+          {/* OUTER CIRCLE */}
+          <motion.div
+            className="
+              w-[220px] h-[220px]
+              sm:w-[300px] sm:h-[300px]
+              md:w-[450px] md:h-[450px]
+              rounded-full border border-[#2039b8]/90
+              flex items-center justify-center relative
+            "
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            {/* TOP CARD */}
+            <motion.div
+              className="
+                absolute top-[-18px] sm:top-[-25px]
+                left-1/2 -translate-x-1/2
+                px-3 py-1 md:px-3 md:py-3 rounded-full
+                backdrop-blur-xl bg-white/10 border border-white/20
+                text-white text-xs
+              "
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2.6, repeat: Infinity }}
+            >
+              Global Expertise
+            </motion.div>
+
+            {/* MIDDLE CIRCLE */}
+            <motion.div
+              className="
+                w-[170px] h-[170px]
+                sm:w-[240px] sm:h-[240px]
+                md:w-[360px] md:h-[360px]
+                rounded-full border border-[#5454AB]
+                flex items-center justify-center relative
+              "
+            >
+              {/* LEFT CARD */}
+             <motion.div
+  className="
+    absolute
+    left-[-65px] sm:left-[-50px]
+    top-1/2 -translate-y-1/2
+    px-2 py-2 md:px-2 md:py-3 sm:px-3 sm:py-2
+    max-w-[110px] sm:max-w-none
+    rounded-full
+    text-center
+    backdrop-blur-xl bg-white/10 border border-white/20
+    text-[10px] sm:text-xs
+    text-white
+    scale-90 sm:scale-100
+    leading-tight
+  "
+  animate={{ y: [0, -10, 0] }}
+  transition={{ duration: 2.6, repeat: Infinity }}
+>
+  Future Ready Thinking
+</motion.div>
+
+
+              {/* RIGHT CARD */}
+             <motion.div
+  className="
+    absolute
+    right-[-45px] sm:right-[-50px]
+    top-1/2 -translate-y-1/2
+    px-3 py-3 md:px-4 md:py-3 sm:px-3 sm:py-2
+    max-w-[110px] sm:max-w-none
+    rounded-full
+    text-center
+    backdrop-blur-xl bg-white/10 border border-white/20
+    text-[10px] sm:text-xs
+    text-white
+    scale-90 sm:scale-100
+    leading-tight
+  "
+  animate={{ y: [0, -10, 0] }}
+  transition={{ duration: 2.6, repeat: Infinity }}
+>
+  People First
+</motion.div>
+
+
+              {/* INNER CIRCLE */}
+              <motion.div
+                className="
+                  w-[120px] h-[120px]
+                  sm:w-[180px] sm:h-[180px]
+                  md:w-[280px] md:h-[280px]
+                  rounded-full border border-[#FF7A00]
+                  flex items-center justify-center
+                "
+              >
+                <div className="flex flex-col items-center text-white">
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
+                    20+
+                  </h1>
+                  <p className="text-xs sm:text-sm text-gray-400 text-center">
+                    Years of Global Experience
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* BOTTOM CARD */}
+            <motion.div
+              className="
+                absolute bottom-[-18px] sm:bottom-[-30px]
+                left-1/2 -translate-x-1/2
+                px-10 py-1 md:px-10 md:py-3 rounded-full
+                backdrop-blur-xl bg-white/10 border border-white/20
+                text-white text-xs
+              "
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2.6, repeat: Infinity }}
+            >
+              Bespoke Approach
+            </motion.div>
+          </motion.div>
+        </div>
+
+      
+    
+
+
+     
+        
+
       </div>
     </section>
   );

@@ -8,10 +8,10 @@ import navigation from "@/data/navbar.json";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState(null);
-  const [openmega , setOpenMega] = useState(false)
+  const [openmega, setOpenMega] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm"  onMouseLeave={()=> setActiveMega(null)}>
       <div className="container mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
@@ -31,10 +31,13 @@ export default function Navbar() {
               key={item.key}
               className="relative"
               onMouseEnter={() => setActiveMega(item.key)}
-              onMouseLeave={() => setActiveMega(null)}
+             
             >
               {item.slug ? (
-                <Link href={item.slug} className=" cursor-pointer hover:text-[#43438f]">
+                <Link
+                  href={item.slug}
+                  className=" cursor-pointer hover:text-[#43438f]"
+                >
                   {item.name}
                 </Link>
               ) : (
@@ -46,7 +49,7 @@ export default function Navbar() {
 
               {/* MEGA DROPDOWN */}
               {item.columns && activeMega === item.key && (
-                <div className="absolute left-1/2 top-full w-screen -translate-x-1/2 bg-white shadow-xl border-t">
+                <div className="fixed left-5 right-5 top-20 bg-white shadow-gray-300 shadow-sm border-t border-gray-200">
                   <div className="container mx-auto px-6 md:px-40 py-10">
                     <div
                       className="grid gap-8"
@@ -98,73 +101,70 @@ export default function Navbar() {
       </div>
 
       {/* ================= MOBILE MENU ================= */}
-     {/* ================= MOBILE MENU ================= */}
-{mobileOpen && (
-  <div className="md:hidden bg-white shadow-lg px-6 py-6">
-    {navigation.navItems.map((item) => (
-      <div key={item.key} className="mb-4">
-        
-        {/* Items WITH submenu */}
-        {item.columns ? (
-          <>
-            <button
-              onClick={() =>
-                setActiveMega(activeMega === item.key ? null : item.key)
-              }
-              className="flex justify-between items-center w-full text-left font-medium"
-            >
-              {item.name}
-              <FiChevronDown
-                className={`transition-transform ${
-                  activeMega === item.key ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+      {mobileOpen && (
+        <div className="md:hidden bg-white shadow-lg px-6 py-6">
+          {navigation.navItems.map((item) => (
+            <div key={item.key} className="mb-4">
+              {/* Items WITH submenu */}
+              {item.columns ? (
+                <>
+                  <button
+                    onClick={() =>
+                      setActiveMega(activeMega === item.key ? null : item.key)
+                    }
+                    className="flex justify-between items-center w-full text-left font-medium"
+                  >
+                    {item.name}
+                    <FiChevronDown
+                      className={`transition-transform ${
+                        activeMega === item.key ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-            {/* Submenu */}
-            {activeMega === item.key && (
-              <div className="mt-3 ml-4 space-y-3">
-                {item.columns.map((column) =>
-                  column.items.map((link, i) => (
-                    <Link
-                      key={i}
-                      href={link.slug}
-                      onClick={() => setMobileOpen(false)}
-                      className="block text-gray-600"
-                    >
-                      {link.label}
-                    </Link>
-                  ))
-                )}
-              </div>
-            )}
-          </>
-        ) : (
-          /* Items WITHOUT submenu */
+                  {/* Submenu */}
+                  {activeMega === item.key && (
+                    <div className="mt-3 ml-4 space-y-3">
+                      {item.columns.map((column) =>
+                        column.items.map((link, i) => (
+                          <Link
+                            key={i}
+                            href={link.slug}
+                            onClick={() => setMobileOpen(false)}
+                            className="block text-gray-600"
+                          >
+                            {link.label}
+                          </Link>
+                        ))
+                      )}
+                    </div>
+                  )}
+                </>
+              ) : (
+                /* Items WITHOUT submenu */
+                <Link
+                  href={item.slug}
+                  onClick={() => setMobileOpen(false)}
+                  className="block font-medium"
+                >
+                  {item.name}
+                </Link>
+              )}
+            </div>
+          ))}
+
+          {/* Mobile CTA */}
           <Link
-            href={item.slug}
+            href="/contact"
             onClick={() => setMobileOpen(false)}
-            className="block font-medium"
+            className="flex justify-center mt-6"
           >
-            {item.name}
+            <button className="px-20 py-4 border border-[#5454AB] text-[#5454AB] rounded-full">
+              Contact Us
+            </button>
           </Link>
-        )}
-      </div>
-    ))}
-
-    {/* Mobile CTA */}
-    <Link
-      href="/contact"
-      onClick={() => setMobileOpen(false)}
-      className="flex justify-center mt-6"
-    >
-      <button className="px-20 py-4 border border-[#5454AB] text-[#5454AB] rounded-full">
-        Contact Us
-      </button>
-    </Link>
-  </div>
-)}
-
+        </div>
+      )}
     </nav>
   );
 }

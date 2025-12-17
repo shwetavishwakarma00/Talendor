@@ -9,16 +9,7 @@ import { RiTeamLine } from "react-icons/ri";
 export default function DeliveryFormatSection() {
   return (
     <section
-      className="
-        py-25 
-        w-full 
-        bg-gradient-to-b 
-        from-[#5454AB]/10 
-        to-[#5454AB]/5
-        
-        relative
-      "
-    >
+      className="py-25 w-full bg-gradient-to-b  from-[#5454AB]/10  to-[#5454AB]/5 relative">
       {/* Heading */}
       <motion.div
         className="text-center max-w-2xl mx-auto px-4 sm:px-6"
@@ -43,22 +34,7 @@ export default function DeliveryFormatSection() {
           whileInView={{ width: "80%" }}
           transition={{ duration: 1.4, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="
-            hidden sm:block
-            absolute 
-            left-1/2 
-            -translate-x-1/2
-            h-[3px] 
-            bg-[#5454AB]/80 
-            rounded-full
-            top-[52px]
-            z-0
-          "
-        />
-
-        
-        
-
+          className="hidden sm:block absolute left-1/2 -translate-x-1/2 h-[3px]  bg-[#5454AB]/80  rounded-full top-[52px] z-0"/>
       </div>
 
       {/* Cards */}
@@ -70,20 +46,7 @@ export default function DeliveryFormatSection() {
   whileInView={{ opacity: 1 }}
   transition={{ duration: 1 }}
   viewport={{ once: true }}
-  className="
-    sm:hidden
-    absolute
-    left-1/2
-    -translate-x-1/2
-    top-[40px]        /* center of first circle */
-    bottom-[96px]    /* center of last circle */
-    w-[3px]
-    bg-[#5454AB]/70
-    rounded-full
-    -z-10
-    pointer-events-none
-  "
-/>
+  className="sm:hidden absolute left-1/2 -translate-x-1/2 top-[40px]  bottom-[96px] w-[3px] bg-[#5454AB]/70 rounded-full -z-10 ointer-events-none"/>
 
 
 
@@ -129,19 +92,7 @@ function DeliveryCard({ icon, title, delay }) {
       whileHover={{ scale: 1.08 }}
     >
       <div
-        className="
-          w-20 h-20 sm:w-24 sm:h-24
-          bg-white 
-          flex items-center justify-center 
-          rounded-full 
-          shadow-lg 
-          border-4 border-[#5454AB]
-          transition-all 
-          duration-300 
-          hover:bg-gray-100 
-          hover:shadow-2xl
-        "
-      >
+        className="w-20 h-20 sm:w-24 sm:h-24 bg-white flex items-center justify-center rounded-full shadow-lg border-4 border-[#5454AB] transition-all duration-300  hover:bg-gray-100 hover:shadow-2xl">
         {icon}
       </div>
 

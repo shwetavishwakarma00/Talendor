@@ -172,22 +172,7 @@ export default function ServicePage() {
                     </ul>
                   </div>
 
-                  {/* Simple vertical list instead of heavy timeline */}
-                  {/* <div className="space-y-4">
-                    {section.items.map((item, i) => (
-                      <div
-                        key={i}
-                        className="rounded-xl border border-slate-200 bg-white px-4 py-3"
-                      >
-                        <p className="text-xs font-medium text-slate-500 mb-1">
-                          Phase {i + 1}
-                        </p>
-                        <p className="text-sm text-slate-700 leading-relaxed">
-                          {item}
-                        </p>
-                      </div>
-                    ))}
-                  </div> */}
+                  
                 </div>
               )}
             </section>

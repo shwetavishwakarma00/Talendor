@@ -25,7 +25,8 @@ export default function HeroSection() {
 
         {/* TEXT SECTION */}
         <motion.div
-          className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left min-h-[500px]"
+          className="flex-1 flex flex-col justify-start lg:justify-center items-center lg:items-start text-center lg:text-left min-h-[420px] pt-6 lg:pt-0"
+
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
@@ -86,11 +87,14 @@ export default function HeroSection() {
 
         </motion.div>
 
-        {/* IMAGE SECTION (HIDDEN ON MOBILE) */}
-        <div className="flex-1 relative hidden md:block">
+        {/* IMAGE SECTION  */}
+        <div className="flex-1 relative flex justify-center -mt-10 sm:mt-6 lg:mt-0">
+
+
           {/* Mustard Wave 1 */}
           <motion.svg
-            className="absolute top-30 left-20 w-[500px] z-20"
+           className="absolute top-[40%] md:top-30 left-1/2 w-[95%] -translate-x-1/2 z-20"
+
             viewBox="0 0 400 120"
             fill="none"
             initial={{ opacity: 0 }}
@@ -125,7 +129,8 @@ export default function HeroSection() {
 
           {/* Mustard Wave 2 */}
           <motion.svg
-            className="absolute top-50 left-15 w-[550px] z-20"
+           className="absolute top-[50%] md:top-50 left-1/2 w-[105%] -translate-x-1/2 z-20"
+
             viewBox="0 0 450 120"
             fill="none"
             initial={{ opacity: 0 }}
@@ -157,14 +162,37 @@ export default function HeroSection() {
           </motion.svg>
           {/* Outer Dotted Border Circle */}
           <motion.div
-            className="relative w-[480px] h-[480px] mx-auto rounded-full border-dotted border-[4px] border-[#96b4d5] flex items-center justify-center z-10"
+  className="
+  relative
+ w-[82vw] sm:w-[70vw] max-w-[480px]
+  aspect-square
+  mx-auto
+  rounded-full
+  border-dotted border-[4px] border-[#96b4d5]
+  flex items-center justify-center
+  z-10
+"
+
+
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1 }}
           >
 
             {/* Inner Circle to create GAP */}
-            <div className="w-[400px] h-[400px] rounded-full overflow-hidden relative">
+           <div
+  
+  className="
+    w-[85%]
+    aspect-square
+    rounded-full
+    overflow-hidden
+    relative
+  "
+>
+
+
+
 
               <Image
                 src="/images/herosectionimg.jpg"

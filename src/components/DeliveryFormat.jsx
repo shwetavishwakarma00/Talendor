@@ -10,12 +10,12 @@ export default function DeliveryFormatSection() {
   return (
     <section
       className="
-        py-20 
+        py-25 
         w-full 
         bg-gradient-to-b 
         from-[#5454AB]/10 
         to-[#5454AB]/5
-        mb-10
+        
         relative
       "
     >

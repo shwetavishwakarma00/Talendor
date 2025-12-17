@@ -38,7 +38,7 @@ export default function InsightsDiscoveryPage() {
             <h1 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">
               Insights Discovery: four colours, powerful self‑awareness
             </h1>
-            <p className="mt-4 text-sm md:text-base text-purple-100/80">
+            <p className="mt-4 text-sm md:text-base font-para text-purple-100/80">
               A simple four‑colour model that helps people understand themselves,
               appreciate others, and unlock better collaboration at work.
             </p>

@@ -47,7 +47,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3 }}
           >
             WELCOME TO
-            <span className="block font-heading text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+            <span className="block font-heading text-5xl  bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
               TALENDOR
             </span>
           </motion.h1>

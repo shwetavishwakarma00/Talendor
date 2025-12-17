@@ -1,8 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import productsData from "@/data/products.json";
+
 
 export default function FlagshipProduct() {
+  const slug = productsData.products[0].slug;
+
   return (
     <section
       className="
@@ -67,9 +72,11 @@ export default function FlagshipProduct() {
         </p>
 
         {/* BUTTON */}
-        <button className="w-fit px-6 py-2 border border-[#FB7704] text-[#FB7704] rounded-lg hover:bg-[#FB7704] hover:text-white transition">
-          Click here
-        </button>
+        <Link href={`/products/${slug}`}>
+  <button className="w-fit px-6 py-2 border border-[#FB7704] text-[#FB7704] rounded-lg hover:bg-[#FB7704] hover:text-white transition">
+    Click here
+  </button>
+</Link>
       </div>
 
       {/* RIGHT SIDE */}

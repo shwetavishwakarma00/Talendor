@@ -49,7 +49,7 @@ export default function Navbar() {
 
               {/* MEGA DROPDOWN */}
               {item.columns && activeMega === item.key && (
-                <div className="fixed left-5 right-5 top-20 bg-white shadow-gray-300 shadow-sm border-t border-gray-200">
+                <div className="fixed left-5 right-5 top-20 bg-white shadow-gray-300 shadow-md border-t border-gray-300">
                   <div className="container mx-auto px-6 md:px-40 py-10">
                     <div
                       className="grid gap-8"

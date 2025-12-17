@@ -1,13 +1,10 @@
-
-
-
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import scrollSections from "@/data/scrollsection.json";
 import Link from "next/link";
+
 
 export default function ScrollingShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,7 +47,9 @@ export default function ScrollingShowcase() {
   }, []);
 
   return (
-    <section className="relative bg-white">
+    <section 
+    id="services"
+    className="relative bg-white">
 
       {/* ================= PHONE ONLY (CARDS) ================= */}
       <div className="md:hidden px-5 py-16 space-y-10">

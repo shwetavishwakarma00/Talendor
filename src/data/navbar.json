@@ -1,23 +1,24 @@
 {
   "navItems": [
     {
-      "label": "Home",
-      "key": "home"
+      "name": "Home",
+      "key": "home",
+      "slug":"/"
     },
     {
-      "label": "About Us",
+      "name": "About Us",
       "key": "about us",
       "slug":"/aboutus"
     },
     {
-      "label": "Products",
+      "name": "Products",
       "key": "products",
       "columns": [
         {
           "title": "Products",
           "items": [
             {
-              "label": "OUR FLAGSHIP PRODUCT",
+              "label": "Our flagship product",
               "slug": "/products/insights-discovery"
             }
             
@@ -26,14 +27,14 @@
       ]
     },
     {
-      "label": "Services",
+      "name": "Services",
       "key": "services",
       "columns": [
         {
           "title": "Services",
           "items":[
             {
-                "label":"STRATEGIC HR CONSULTING SERVICES",
+                "label":"Strategic hr consulting services",
                 "slug":"/services/strategic-hr-consulting"
             },
             {

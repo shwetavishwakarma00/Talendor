@@ -9,7 +9,7 @@
       "Future-Ready Organization",
       "Business-Enbaling Strategy"
     ],
-    "image": "/images/team.png"
+    "image": "/images/team.webp"
   },
   {
     "slug":"leadership-development-journeys",
@@ -25,7 +25,7 @@
       "Thriving in Bussiness Leadereship"
 
     ],
-    "image": "/images/leader.png"
+    "image": "/images/leader.webp"
   },
   {
     "slug":"reskilling-programs",
@@ -40,7 +40,7 @@
       "Reverse Metoring & Inclusive Innovation",
       "Working Smarter"
     ],
-    "image": "/images/soft-skills.png"
+    "image": "/images/soft-skills.webp"
   },
    {
     "slug":"team-development-journeys",
@@ -51,7 +51,7 @@
       "Builinding Multigenerational Teams",
       "Thriving & High-Performing Teams"
     ],
-    "image": "/images/collaboration.png"
+    "image": "/images/collaboration.webp"
   },
   {
     "slug":"wellbeing",
@@ -66,7 +66,7 @@
       "Financial Wellness",
       "Social Connection"
     ],
-    "image": "/images/consultant.png"
+    "image": "/images/consultant.webp"
   },
   {
     "slug":"coaching-mentoring",
@@ -81,7 +81,7 @@
       "Young HR Professional Mentoring",
       "Fututre HR Leader Metoring"
     ],
-    "image": "/images/growth.png"
+    "image": "/images/growth.webp"
   },
    {
     "slug":"customer-delight-programs",
@@ -92,7 +92,7 @@
       "Customer Delight Journey",
       "Service Exellence"
     ],
-    "image": "/images/user-experience.png"
+    "image": "/images/user-experience.webp"
   }
 
 

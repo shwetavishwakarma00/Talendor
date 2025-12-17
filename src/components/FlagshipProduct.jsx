@@ -55,7 +55,7 @@ export default function FlagshipProduct() {
           className="
             text-gray-300 text-base sm:text-lg
             leading-relaxed mb-6
-            w-full max-w-[520px]
+            w-full max-w-[520px] font-para
           "
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}

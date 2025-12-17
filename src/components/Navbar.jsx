@@ -8,14 +8,15 @@ import navigation from "@/data/navbar.json";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState(null);
+  const [openmega, setOpenMega] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
-      <div className="container mx-auto px-6 md:px-40 h-20 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm"  onMouseLeave={()=> setActiveMega(null)}>
+      <div className="container mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Logo"
             width={130}
             height={50}
@@ -30,22 +31,25 @@ export default function Navbar() {
               key={item.key}
               className="relative"
               onMouseEnter={() => setActiveMega(item.key)}
-              onMouseLeave={() => setActiveMega(null)}
+             
             >
               {item.slug ? (
-                <Link href={item.slug} className=" cursor-pointer hover:text-[#43438f]">
-                  {item.label}
+                <Link
+                  href={item.slug}
+                  className=" cursor-pointer hover:text-[#43438f]"
+                >
+                  {item.name}
                 </Link>
               ) : (
                 <button className="flex items-center gap-1 hover:text-[#43438f]">
-                  {item.label}
+                  {item.name}
                   <FiChevronDown size={14} />
                 </button>
               )}
 
               {/* MEGA DROPDOWN */}
               {item.columns && activeMega === item.key && (
-                <div className="absolute left-1/2 top-full w-screen -translate-x-1/2 bg-white shadow-xl border-t">
+                <div className="fixed left-5 right-5 top-20 bg-white shadow-gray-300 shadow-md border-t border-gray-300">
                   <div className="container mx-auto px-6 md:px-40 py-10">
                     <div
                       className="grid gap-8"
@@ -100,40 +104,62 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden bg-white shadow-lg px-6 py-6">
           {navigation.navItems.map((item) => (
-            <div key={item.key} className="mb-6">
-              {item.slug ? (
+            <div key={item.key} className="mb-4">
+              {/* Items WITH submenu */}
+              {item.columns ? (
+                <>
+                  <button
+                    onClick={() =>
+                      setActiveMega(activeMega === item.key ? null : item.key)
+                    }
+                    className="flex justify-between items-center w-full text-left font-medium"
+                  >
+                    {item.name}
+                    <FiChevronDown
+                      className={`transition-transform ${
+                        activeMega === item.key ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {/* Submenu */}
+                  {activeMega === item.key && (
+                    <div className="mt-3 ml-4 space-y-3">
+                      {item.columns.map((column) =>
+                        column.items.map((link, i) => (
+                          <Link
+                            key={i}
+                            href={link.slug}
+                            onClick={() => setMobileOpen(false)}
+                            className="block text-gray-600"
+                          >
+                            {link.label}
+                          </Link>
+                        ))
+                      )}
+                    </div>
+                  )}
+                </>
+              ) : (
+                /* Items WITHOUT submenu */
                 <Link
                   href={item.slug}
                   onClick={() => setMobileOpen(false)}
                   className="block font-medium"
                 >
-                  {item.label}
+                  {item.name}
                 </Link>
-              ) : (
-                <>
-                  <p className="font-semibold mb-2">{item.label}</p>
-                  {item.columns?.map((col, idx) => (
-                    <ul key={idx} className="ml-4 space-y-2">
-                      {col.items.map((link, i) => (
-                        <li key={i}>
-                          <Link
-                            href={link.slug}
-                            onClick={() => setMobileOpen(false)}
-                            className="text-gray-600"
-                          >
-                            {link.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ))}
-                </>
               )}
             </div>
           ))}
 
-          <Link href="/contact" onClick={() => setMobileOpen(false)}>
-            <button className="px-6 font-para py-3 border border-[#5454AB] text-[#5454AB] rounded-full hover:bg-purple-50 transition">
+          {/* Mobile CTA */}
+          <Link
+            href="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="flex justify-center mt-6"
+          >
+            <button className="px-20 py-4 border border-[#5454AB] text-[#5454AB] rounded-full">
               Contact Us
             </button>
           </Link>

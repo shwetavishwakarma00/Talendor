@@ -22,23 +22,37 @@
   }
 } */
 
-body {
-  /* background: var(--background); */
-  /* color: var(--foreground); */
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--foreground);
-  font-family: Sora, Manrope;
-}
+
 :root {
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
   --primary: #5454AB;
   --primary-light: #7979D1;
   --background-gray: #F4F4F7;
   --text-gray: #333333;
   --light-gray: #777777;
-  --font-roboto: 'Roboto', sans-serif;
 }
 
-/* Fonts */
-.font-heading { font-family: var(--font-sora); }
-.font-para { font-family: var(--font-manrope); }
 
+/* Fonts */
+/* Paragraphs & default text → Manrope */
+body {
+  font-family: var(--font-body);
+  color: var(--text-gray);
+}
+
+/* Headings → Sora */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Paragraph explicitly (optional but safe) */
+p {
+  font-family: var(--font-body);
+}

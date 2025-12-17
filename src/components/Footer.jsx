@@ -5,12 +5,17 @@ import { FiInstagram } from "react-icons/fi";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TiPhone } from "react-icons/ti";
+import productsData from "@/data/products.json";
+import scrollSections from "@/data/scrollsection.json";
+
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
+ const product = productsData.products[0];
+ 
+  
   return (
     <footer className="w-full bg-black text-gray-300 px-6 md:px-16 lg:px-24 xl:px-32 pt-10">
       
@@ -66,23 +71,34 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4">
               Quick Links
             </h3>
-            <ul className="space-y-2 text-sm">
-              {[
-                "Our Expertise",
-                "Services & Products",
-                "Why Choose Us",
-                "Our Founders",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="hover:text-orange-400 transition"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+             <ul className="space-y-2 text-sm">
+    <li>
+       <Link
+    href={`/products/${product.slug}`}
+    className="hover:text-orange-400 transition"
+  >
+        Products
+      </Link>
+    </li>
+
+    <li>
+        <Link
+                  href="/#services"
+                  className="hover:text-orange-400 transition"
+                >
+        Services
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/why-choose-us"
+        className="hover:text-orange-400 transition"
+      >
+        Why Choose Us?
+      </Link>
+    </li>
+  </ul>
           </div>
 
           {/* CONTACT */}

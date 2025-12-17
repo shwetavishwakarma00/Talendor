@@ -7,11 +7,13 @@ import Link from "next/link";
 import productsData from "@/data/products.json";
 
 
+
 import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 export default function HeroSection() {
   const product = productsData.products[0];
   const slug = product.slug;
+ 
   return (
     <section className="w-full min-h-[600px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
 

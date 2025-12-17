@@ -22,7 +22,7 @@ const FounderPage = () => {
     <section className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-6xl mx-auto px-6 py-20">
         {/* Hero Section */}
-        <div className="text-center mb-20">
+        <div className="text-center mt-10 mb-20">
           <div className="inline-block w-32 h-32 md:w-40 md:h-40 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-2xl mb-8 overflow-hidden ring-4 ring-white/50">
             <img 
               src={founder.image} 

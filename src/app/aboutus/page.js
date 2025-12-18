@@ -153,7 +153,7 @@ export default function AboutTalendor() {
       </section>
       <section>
          <div>
-           <h2 className="text-[20px] md:text-[30px] font-bold uppercase tracking-[0.18em] text-orange-500 text-center">WHY CHOOSE TALENDOR?</h2>
+           <h2 className="text-[20px] md:text-[30px] font-bold uppercase tracking-[0.18em] text-orange-500 text-center pt-8">WHY CHOOSE TALENDOR?</h2>
          </div>
          <div className="flex justify-center">
            <p className=" text-center mt-4  text-gray-600 sm:text-base md:w-[500px] w-[300px] ">Your people are your greatest asset. At Talendor, we 
@@ -164,8 +164,8 @@ export default function AboutTalendor() {
          </div>
          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 md:px-10">
              {
-               values.map((item )=>(
-                 < motion.div
+               values.map((item ,i  )=>(
+                 < motion.div key={i}
                   whileHover={{scale : 1.1 }}
                  className="rounded-3xl border-2 border-orange-200/60 bg-white p-6 sm:p-8 shadow-lg shadow-orange-100 text-center md:mb-20 mb-5 ">
                   <h3 className="text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.18em] text-orange-500">{item.title} </h3>

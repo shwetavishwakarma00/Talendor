@@ -36,14 +36,11 @@
 
 
 /* Fonts */
-/* Paragraphs & default text → Manrope */
 body {
-  font-family: var(--font-body);
-  color: var(--text-gray);
+  font-family: 'Manrope', sans-serif;
 }
 
-html, body {
-  overflow-x: hidden;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
 }
-
 

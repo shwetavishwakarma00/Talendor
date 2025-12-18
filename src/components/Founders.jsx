@@ -16,14 +16,21 @@ const Founders = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const variants = {
-    enter: { opacity: 0, x: 100 },
-    center: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -100 },
-  };
+ const variants = {
+  enter: {
+    opacity: 0,
+    x: typeof window !== "undefined" && window.innerWidth < 768 ? 40 : 100,
+  },
+  center: { opacity: 1, x: 0 },
+  exit: {
+    opacity: 0,
+    x: typeof window !== "undefined" && window.innerWidth < 768 ? -40 : -100,
+  },
+};
+
 
   return (
-    <section className="px-4 md:px-10 py-10 md:py-20 bg-gradient-to-b from-gray-300 to-white overflow-hidden">
+    <section className="px-4 md:px-10 py-10 md:py-20 bg-gradient-to-b from-gray-300 to-white overflow-x-hidden">
   <div className="relative w-full flex justify-center overflow-hidden">
 
     <AnimatePresence mode="wait">
@@ -40,7 +47,7 @@ const Founders = () => {
         <div className="flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-4xl">
 
           {/* Image */}
-          <div className="w-full md:w-1/3 md:h-30 md:h-full ">
+          <div className="w-full md:w-1/3 h-80 md:h-auto ">
             <img
               src={founders.founders[index].image}
               alt={founders.founders[index].name}

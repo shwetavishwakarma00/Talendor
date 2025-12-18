@@ -1,8 +1,28 @@
 "use client";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
 
 export default function AboutTalendor() {
+ const values = [
+  {
+    title: "People First, Always",
+    description: "We prioritize people-centric strategies that drive measurable results."
+  },
+  {
+    title: "Future-Ready Thinking",
+    description: "Our solutions are designed to keep businesses ahead of the curve."
+  },
+  {
+    title: "Bespoke Approach",
+    description: "No one-size-fits-all strategies—only customized HR solutions."
+  },
+  {
+    title: "Global Expertise, Local Impact",
+    description: "Combining international HR knowledge and tools with localized insights."
+  }
+];
+
   return (
     <main className="min-h-screen bg-white text-black">
       {/* HERO SECTION */}
@@ -130,6 +150,30 @@ export default function AboutTalendor() {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+         <div>
+           <h2 className="text-[20px] md:text-[30px] font-bold uppercase tracking-[0.18em] text-orange-500 text-center">WHY CHOOSE TALENDOR?</h2>
+         </div>
+         <div className="flex justify-center">
+           <p className=" text-center mt-4  text-gray-600 sm:text-base md:w-[500px] w-[300px] ">Your people are your greatest asset. At Talendor, we 
+                blend innovation with human-centric solutions to create 
+                workplaces that thrive. Partner with us to unlock your 
+                organization’s full potential.
+           </p>
+         </div>
+         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 md:px-10">
+             {
+               values.map((item )=>(
+                 < motion.div
+                  whileHover={{scale : 1.1 }}
+                 className="rounded-3xl border-2 border-orange-200/60 bg-white p-6 sm:p-8 shadow-lg shadow-orange-100 text-center md:mb-20 mb-5 ">
+                  <h3 className="text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.18em] text-orange-500">{item.title} </h3>
+                  <p className="mt-3 text-[16px]  font-semibold text-black">{item.description}</p>
+                </motion.div> 
+              ))
+             }
+         </div>
       </section>
     </main>
   );

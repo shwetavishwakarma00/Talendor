@@ -42,17 +42,8 @@ body {
   color: var(--text-gray);
 }
 
-/* Headings → Sora */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
+html, body {
+  overflow-x: hidden;
 }
 
-/* Paragraph explicitly (optional but safe) */
-p {
-  font-family: var(--font-body);
-}
+

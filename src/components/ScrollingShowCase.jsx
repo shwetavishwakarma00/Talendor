@@ -1,13 +1,10 @@
-
-
-
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import scrollSections from "@/data/scrollsection.json";
 import Link from "next/link";
+
 
 export default function ScrollingShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,7 +47,9 @@ export default function ScrollingShowcase() {
   }, []);
 
   return (
-    <section className="relative bg-white">
+    <section 
+    id="services"
+    className="relative bg-white">
 
       {/* ================= PHONE ONLY (CARDS) ================= */}
       <div className="md:hidden px-5 py-16 space-y-10">
@@ -100,14 +99,7 @@ export default function ScrollingShowcase() {
 
       {/* ================= TABLET + DESKTOP (SAME DESIGN) ================= */}
       <div
-        className="
-          hidden md:grid
-          grid-cols-[1fr_1fr_2fr]
-          gap-10 lg:gap-16
-          px-10 lg:px-24
-          py-24 lg:py-32
-        "
-      >
+        className="hidden md:grid grid-cols-[1fr_1fr_2fr] gap-10 lg:gap-16 px-10 lg:px-24 py-24 lg:py-32">
         {/* LEFT — TEXT */}
         <motion.div
           className="sticky top-1/2 -translate-y-1/2 h-fit"

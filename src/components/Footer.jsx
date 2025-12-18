@@ -5,23 +5,32 @@ import { FiInstagram } from "react-icons/fi";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TiPhone } from "react-icons/ti";
+import productsData from "@/data/products.json";
+import Image from "next/image";
+
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const product = productsData.products[0];
+
 
   return (
     <footer className="w-full bg-black text-gray-300 px-6 md:px-16 lg:px-24 xl:px-32 pt-10">
-      
+
       {/* TOP SECTION */}
       <div className="flex flex-col md:flex-row justify-between gap-12 border-b border-gray-700 pb-8">
-        
+
         {/* LEFT: BRAND + DESCRIPTION */}
         <div className="max-w-md">
-          <h2 className="text-2xl font-semibold text-white tracking-wide">
-            TALENDOR
-          </h2>
+          <Image
+            src="/images/logo3.webp"
+            alt="Footer Logo"
+            width={140}   
+            height={50}   
+            className="object-contain"
+          />
 
           <p className="mt-3 text-sm text-gray-400">
             Door to all your Talent Needs
@@ -60,28 +69,39 @@ export default function Footer() {
 
         {/* RIGHT: LINKS + CONTACT */}
         <div className="flex flex-1 flex-col sm:flex-row md:justify-end gap-20">
-          
+
           {/* QUICK LINKS */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2 text-sm">
-              {[
-                "Our Expertise",
-                "Services & Products",
-                "Why Choose Us",
-                "Our Founders",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="hover:text-orange-400 transition"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href={`/products/${product.slug}`}
+                  className="hover:text-orange-400 transition"
+                >
+                  Products
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#services"
+                  className="hover:text-orange-400 transition"
+                >
+                  Services
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/aboutus"
+                  className="hover:text-orange-400 transition"
+                >
+                  About Us
+                </Link>
+              </li>
             </ul>
           </div>
 

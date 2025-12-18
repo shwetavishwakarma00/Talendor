@@ -10,33 +10,13 @@ export default function FlagshipProduct() {
 
   return (
     <section
-      className="
-        w-full flex flex-col md:flex-row
-        min-h-[600px] md:h-[600px]
-      "
-    >
+      className=" w-full flex flex-col md:flex-row min-h-[600px] md:h-[600px]">
       {/* LEFT SIDE */}
       <div
-        className="
-          w-full md:w-1/2
-          px-6 sm:px-10 md:px-20
-          py-12 md:py-20
-          flex flex-col justify-center
-        "
-        style={{ backgroundColor: "#111122" }}
-      >
+        className="w-full md:w-1/2 px-6 sm:px-10 md:px-20 py-12 md:py-20 flex flex-col justify-center" style={{ backgroundColor: "#111122" }}>
         {/* ORANGE RECTANGLE */}
         <div
-          className="
-            border px-6 py-2 rounded-xl mb-8
-            w-full max-w-[528px]
-          "
-          style={{
-            borderColor: "#FB7704",
-            color: "#FB7704",
-            fontSize: "18px",
-          }}
-        >
+          className="border px-6 py-2 rounded-xl mb-8 w-full max-w-[528px]" style={{ borderColor: "#FB7704", color: "#FB7704", fontSize: "18px",}}>
           FLAGSHIP PRODUCT
         </div>
 
@@ -52,11 +32,7 @@ export default function FlagshipProduct() {
 
         {/* PARAGRAPH */}
         <motion.p
-          className="
-            text-gray-300 text-base sm:text-lg
-            leading-relaxed mb-6
-            w-full max-w-[520px]
-          "
+          className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 w-full max-w-[520px] font-para"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
@@ -81,13 +57,7 @@ export default function FlagshipProduct() {
 
       {/* RIGHT SIDE */}
       <div
-        className="
-          w-full md:w-1/2
-          flex items-center justify-center
-          py-12 md:py-0
-        "
-        style={{ backgroundColor: "#222244" }}
-      >
+        className="w-full md:w-1/2 flex items-center justify-center py-12 md:py-0 " style={{ backgroundColor: "#222244" }}>
         {/* SVG WRAPPER */}
         <div className="w-full max-w-[520px] aspect-square">
           <svg

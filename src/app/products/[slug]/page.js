@@ -33,25 +33,25 @@ export default function ProductPage() {
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
       {/* Simple Hero Section with Animations */}
-<section className="relative bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20 my-5 px-6">
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="max-w-3xl mx-auto text-center"
-  >
-    <p className="text-xs uppercase tracking-widest mb-2 text-purple-100">
-      {product.hero.badge}
-    </p>
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-      {product.hero.title}
-    </h1>
-    <p className="text-lg text-purple-100/80 mb-6">
-      {product.hero.description}
-    </p>
-    
-  </motion.div>
-</section>
+      <section className="relative bg-gradient-to-r from-purple-600 to-indigo-700 text-white pt-15 px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mx-auto text-center py-20"
+        >
+          <p className="text-xs uppercase tracking-widest mb-2 text-purple-100">
+            {product.hero.badge}
+          </p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            {product.hero.title}
+          </h1>
+          <p className="text-lg text-purple-100/80 mb-6">
+            {product.hero.description}
+          </p>
+
+        </motion.div>
+      </section>
 
 
       {/* Four colour model */}
@@ -116,7 +116,7 @@ export default function ProductPage() {
             </div>
           </div>
 
-          <div className="relative h-64 w-64 mx-auto">
+          <div className="relative h-84 w-84 mx-auto">
             <Image
               src={product.journey.image.src}
               alt={product.journey.image.alt}
@@ -163,13 +163,11 @@ export default function ProductPage() {
             {product.cta.title}
           </h2>
           <p className="mt-3">{product.cta.description}</p>
-          <div className="mt-6 flex justify-center gap-3">
+          <div className="mt-6 flex justify-center">
             <button className="bg-white text-purple-700 px-6 py-2 rounded-full">
               {product.cta.primary}
             </button>
-            <button className="border border-white px-6 py-2 rounded-full">
-              {product.cta.secondary}
-            </button>
+
           </div>
         </div>
       </section>

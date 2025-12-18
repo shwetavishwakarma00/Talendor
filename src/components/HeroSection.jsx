@@ -7,11 +7,13 @@ import Link from "next/link";
 import productsData from "@/data/products.json";
 
 
+
 import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 export default function HeroSection() {
   const product = productsData.products[0];
   const slug = product.slug;
+
   return (
     <section className="w-full min-h-[600px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
 
@@ -47,7 +49,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3 }}
           >
             WELCOME TO
-            <span className="block font-heading text-5xl font-extrabold bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
+            <span className="block font-heading text-5xl  bg-gradient-to-r from-purple-800 to-orange-400 bg-clip-text text-transparent">
               TALENDOR
             </span>
           </motion.h1>
@@ -93,7 +95,7 @@ export default function HeroSection() {
 
           {/* Mustard Wave 1 */}
           <motion.svg
-           className="absolute top-[40%] md:top-30 left-1/2 w-[95%] -translate-x-1/2 z-20"
+            className="absolute top-[40%] md:top-30 left-1/2 w-[95%] -translate-x-1/2 z-20"
 
             viewBox="0 0 400 120"
             fill="none"
@@ -129,7 +131,7 @@ export default function HeroSection() {
 
           {/* Mustard Wave 2 */}
           <motion.svg
-           className="absolute top-[50%] md:top-50 left-1/2 w-[105%] -translate-x-1/2 z-20"
+            className="absolute top-[50%] md:top-50 left-1/2 w-[105%] -translate-x-1/2 z-20"
 
             viewBox="0 0 450 120"
             fill="none"
@@ -162,40 +164,18 @@ export default function HeroSection() {
           </motion.svg>
           {/* Outer Dotted Border Circle */}
           <motion.div
-  className="
-  relative
- w-[82vw] sm:w-[70vw] max-w-[480px]
-  aspect-square
-  mx-auto
-  rounded-full
-  border-dotted border-[4px] border-[#96b4d5]
-  flex items-center justify-center
-  z-10
-"
-
-
+            className="relative w-[82vw] sm:w-[70vw] max-w-[480px] aspect-square mx-auto rounded-full border-dotted border-[4px] border-[#96b4d5] flex items-center justify-center z-10"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1 }}
           >
 
             {/* Inner Circle to create GAP */}
-           <div
-  
-  className="
-    w-[85%]
-    aspect-square
-    rounded-full
-    overflow-hidden
-    relative
-  "
->
+            <div
 
-
-
-
+              className="w-[85%] aspect-square rounded-full overflow-hidden relative">
               <Image
-                src="/images/herosectionimg.jpg"
+                src="/images/herosectionimg.webp"
                 alt="Team Collaboration"
                 fill
                 className="object-cover"

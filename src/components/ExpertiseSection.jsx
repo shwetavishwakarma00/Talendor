@@ -10,15 +10,7 @@ import { GiTeamIdea } from "react-icons/gi";
 export default function ExpertiseSection() {
   return (
     <section
-      className="
-        w-full
-        py-14 sm:py-16 md:py-20
-        min-h-[420px] md:h-[480px]
-        bg-gradient-to-b
-        from-[#5454AB]/10
-        to-[#5454AB]/5
-      "
-    >
+      className="w-full py-14 sm:py-16 md:py-20 min-h-[420px] md:h-[480px] bg-gradient-to-b from-[#5454AB]/10 to-[#5454AB]/5">
       {/* Heading */}
       <motion.div
         className="text-center max-w-2xl mx-auto px-4"
@@ -73,21 +65,7 @@ function ExpertiseCard({ icon, title }) {
       whileHover={{ scale: 1.05 }}
     >
       <div
-        className="
-          w-16 h-16
-          sm:w-20 sm:h-20
-          md:w-24 md:h-24
-          bg-white
-          flex items-center justify-center
-          rounded-full
-          shadow-lg
-          border border-[#8c8cdc]
-          transition-all
-          duration-300
-          hover:bg-gray-100
-          hover:shadow-xl
-        "
-      >
+        className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white flex items-center justify-center rounded-full shadow-lg border border-[#8c8cdc] transition-all duration-300 hover:bg-gray-100 hover:shadow-xl " >
         <div className="text-[#5454AB] text-2xl sm:text-3xl md:text-4xl">
           {icon}
         </div>

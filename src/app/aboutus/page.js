@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function AboutTalendor() {
   return (
     <main className="min-h-screen bg-white text-black">
@@ -33,12 +35,13 @@ export default function AboutTalendor() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4">
-              <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-xl cursor-pointer shadow-orange-500/30 transition hover:-translate-y-0.5 hover:bg-orange-600">
+
+              <Link href="/contact" className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-xl cursor-pointer shadow-orange-500/30 transition hover:-translate-y-0.5 hover:bg-orange-600">
                 Talk to our team
                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[11px] text-orange-500 group-hover:bg-orange-100">
                   →
                 </span>
-              </button>
+              </Link>
               <button className="inline-flex cursor-pointer items-center justify-center gap-2 text-sm font-medium text-gray-600/80 hover:text-purple-600">
                 Discover Talendor
                 <span className="text-xs">◆</span>

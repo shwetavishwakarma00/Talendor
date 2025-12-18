@@ -1,4 +1,4 @@
-// app/insights-discovery/page.tsx  (Next.js 13+ with app router)
+
 "use client";
 
 import Image from "next/image";
@@ -22,11 +22,11 @@ export default function InsightsDiscoveryPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-500 to-orange-400 text-white">
+      <section className="relative  overflow-hidden bg-gradient-to-br from-purple-600 via-purple-500 to-orange-400 text-white">
         <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-20 md:flex-row md:items-center md:justify-between">
           <motion.div
-            className="max-w-xl"
+            className="max-w-xl "
             initial="hidden"
             animate="visible"
             custom={0}
@@ -53,21 +53,6 @@ export default function InsightsDiscoveryPage() {
                 Talk to an expert
               </button>
             </div>
-          </motion.div>
-
-          <motion.div
-            className="relative h-60 w-60 md:h-72 md:w-72"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Replace src with your wheel image */}
-            <Image
-              src="/images/insights-wheel.png"
-              alt="Insights Discovery four-colour wheel"
-              fill
-              className="rounded-full object-contain drop-shadow-xl"
-            />
           </motion.div>
         </div>
       </section>
@@ -187,9 +172,9 @@ export default function InsightsDiscoveryPage() {
             </div>
 
             <div className="relative mx-auto h-64 w-64 sm:h-72 sm:w-72">
-              {/* Replace with your second wheel image if you have one */}
+             
               <Image
-                src="/images/insights-journey.png"
+                src="/images/talendorp1.webp"
                 alt="Insights Discovery journey wheel"
                 fill
                 className="rounded-full object-contain shadow-lg"

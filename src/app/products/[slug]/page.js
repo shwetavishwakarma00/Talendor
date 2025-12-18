@@ -33,25 +33,25 @@ export default function ProductPage() {
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
       {/* Simple Hero Section with Animations */}
-<section className="relative bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20 my-5 px-6">
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="max-w-3xl mx-auto text-center"
-  >
-    <p className="text-xs uppercase tracking-widest mb-2 text-purple-100">
-      {product.hero.badge}
-    </p>
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-      {product.hero.title}
-    </h1>
-    <p className="text-lg text-purple-100/80 mb-6">
-      {product.hero.description}
-    </p>
-    
-  </motion.div>
-</section>
+      <section className="relative bg-gradient-to-r from-purple-600 to-indigo-700 text-white pt-15 px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mx-auto text-center py-20"
+        >
+          <p className="text-xs uppercase tracking-widest mb-2 text-purple-100">
+            {product.hero.badge}
+          </p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            {product.hero.title}
+          </h1>
+          <p className="text-lg text-purple-100/80 mb-6">
+            {product.hero.description}
+          </p>
+
+        </motion.div>
+      </section>
 
 
       {/* Four colour model */}
@@ -167,7 +167,7 @@ export default function ProductPage() {
             <button className="bg-white text-purple-700 px-6 py-2 rounded-full">
               {product.cta.primary}
             </button>
-    
+
           </div>
         </div>
       </section>

@@ -1,12 +1,9 @@
-
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import productsData from "@/data/products.json";
-
-
 
 import { FaUsers, FaLightbulb, FaChartLine } from "react-icons/fa";
 
@@ -15,20 +12,16 @@ export default function HeroSection() {
   const slug = product.slug;
 
   return (
-    <section className="w-full min-h-[600px] relative overflow-hidden mt-20 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50">
-
+    <section className="w-full relative overflow-hidden pt-20 pb-20 bg-gradient-to-b from-white to-gray-50">
       {/* Background Blobs (ALL DEVICES) */}
       <motion.div className="absolute -top-10 -right-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
       <motion.div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob animation-delay-2000" />
       <motion.div className="absolute top-10 -left-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
 
       <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10 min-h-[600px]">
-
-
         {/* TEXT SECTION */}
         <motion.div
           className="flex-1 flex flex-col justify-start lg:justify-center items-center lg:items-start text-center lg:text-left min-h-[420px] pt-6 lg:pt-0"
-
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
@@ -69,8 +62,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            At Talendor, we don’t just connect businesses with talent; we create lasting
-            partnerships that drive growth, innovation, and excellence.
+            At Talendor, we don’t just connect businesses with talent; we create
+            lasting partnerships that drive growth, innovation, and excellence.
           </motion.p>
 
           {/* Buttons */}
@@ -86,17 +79,13 @@ export default function HeroSection() {
               </button>
             </Link>
           </motion.div>
-
         </motion.div>
 
         {/* IMAGE SECTION  */}
         <div className="flex-1 relative flex justify-center -mt-10 sm:mt-6 lg:mt-0">
-
-
           {/* Mustard Wave 1 */}
           <motion.svg
             className="absolute top-[40%] md:top-30 left-1/2 w-[95%] -translate-x-1/2 z-20"
-
             viewBox="0 0 400 120"
             fill="none"
             initial={{ opacity: 0 }}
@@ -111,7 +100,6 @@ export default function HeroSection() {
               </linearGradient>
             </defs>
 
-
             <motion.path
               d="M0 60 C100 120 300 0 400 60"
               stroke="url(#waveGrad1)"
@@ -121,18 +109,15 @@ export default function HeroSection() {
               animate={{ pathLength: 1 }}
               transition={{
                 duration: 1.2,
-                delay: 1,   // ⬅ starts after the image
-                ease: "easeInOut"
-
+                delay: 1, // ⬅ starts after the image
+                ease: "easeInOut",
               }}
             />
           </motion.svg>
 
-
           {/* Mustard Wave 2 */}
           <motion.svg
             className="absolute top-[50%] md:top-50 left-1/2 w-[105%] -translate-x-1/2 z-20"
-
             viewBox="0 0 450 120"
             fill="none"
             initial={{ opacity: 0 }}
@@ -157,8 +142,7 @@ export default function HeroSection() {
               transition={{
                 duration: 1.2,
                 delay: 1.2,
-                ease: "easeInOut"
-
+                ease: "easeInOut",
               }}
             />
           </motion.svg>
@@ -169,36 +153,44 @@ export default function HeroSection() {
             animate={{ scale: 1 }}
             transition={{ duration: 1 }}
           >
-
             {/* Inner Circle to create GAP */}
-            <div
-
-              className="w-[85%] aspect-square rounded-full overflow-hidden relative">
+            <div className="w-[85%] aspect-square rounded-full overflow-hidden relative">
               <Image
                 src="/images/herosectionimg.webp"
                 alt="Team Collaboration"
                 fill
+                priority
+                sizes="(max-width: 640px) 82vw,
+         (max-width: 1024px) 70vw,
+         480px"
                 className="object-cover"
               />
             </div>
-
           </motion.div>
-
         </div>
 
         {/* FLOATING ICONS (HIDDEN ON MOBILE) */}
-        <motion.div className="absolute top-40 left-230 p-3 bg-white rounded-full shadow-lg hidden md:block"
-          animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+        <motion.div
+          className="absolute top-40 left-230 p-3 bg-white rounded-full shadow-lg hidden md:block"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
           <FaUsers className="text-purple-500 w-6 h-6" />
         </motion.div>
 
-        <motion.div className="absolute top-24 right-40 p-3 bg-white rounded-full shadow-lg hidden md:block"
-          animate={{ y: [0, 10, 0] }} transition={{ duration: 2.5, repeat: Infinity }}>
+        <motion.div
+          className="absolute top-24 right-40 p-3 bg-white rounded-full shadow-lg hidden md:block"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity }}
+        >
           <FaLightbulb className="text-yellow-400 w-6 h-6" />
         </motion.div>
 
-        <motion.div className="absolute bottom-44 right-56 p-3 bg-white rounded-full shadow-lg hidden md:block"
-          animate={{ y: [0, -15, 0] }} transition={{ duration: 3, repeat: Infinity }}>
+        <motion.div
+          className="absolute bottom-44 right-56 p-3 bg-white rounded-full shadow-lg hidden md:block"
+          animate={{ y: [0, -15, 0] }}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
           <FaChartLine className="text-orange-500 w-6 h-6" />
         </motion.div>
       </div>
@@ -212,10 +204,18 @@ export default function HeroSection() {
           animation-delay: 2s;
         }
         @keyframes blob {
-          0% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(30px, -50px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
-          100% { transform: translate(0, 0) scale(1); }
+          0% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
         }
       `}</style>
     </section>

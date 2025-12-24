@@ -113,11 +113,11 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <p className="flex items-center gap-2">
                 <MdEmail className="text-orange-400" />
-                info@talendor.com
+                info@talendor.in
               </p>
               <p className="flex items-center gap-2">
                 <TiPhone className="text-orange-400" />
-                +1 (555) 123-4567
+                +91 9818711851
               </p>
             </div>
           </div>

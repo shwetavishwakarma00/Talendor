@@ -30,14 +30,14 @@ export default function ContactUs() {
                 <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#5454AB]">
                   ✉️
                 </span>
-                <span className="break-all">Talendor@gmail.com</span>
+                <span className="break-all">info@talendor.in</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#5454AB]">
                   📞
                 </span>
-                <span>+91 123 456 789</span>
+                <span>+91 9818711851</span>
               </div>
             </div>
           </div>

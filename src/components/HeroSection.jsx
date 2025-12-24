@@ -13,7 +13,6 @@ export default function HeroSection() {
 
   return (
     <section className="w-full relative overflow-hidden pt-20 pb-20 bg-gradient-to-b from-white to-gray-50">
-      {/* Background Blobs (ALL DEVICES) */}
       <motion.div className="absolute -top-10 -right-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
       <motion.div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob animation-delay-2000" />
       <motion.div className="absolute top-10 -left-32 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply opacity-30 blur-3xl animate-blob" />
@@ -160,9 +159,7 @@ export default function HeroSection() {
                 alt="Team Collaboration"
                 fill
                 priority
-                sizes="(max-width: 640px) 82vw,
-         (max-width: 1024px) 70vw,
-         480px"
+                sizes="(max-width: 640px) 82vw,(max-width: 1024px) 70vw,480px"
                 className="object-cover"
               />
             </div>
